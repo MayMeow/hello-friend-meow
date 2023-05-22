@@ -3,6 +3,7 @@
 {{ end }}
 
 {{ define "main" }}
+    {{ if eq .Site.Params.frontpageVariant "blog" }}
     <main aria-role="main">
         <div>
             {{ if .Site.Params.Portrait.Path }}
@@ -35,4 +36,36 @@
             {{- end }}
         </div>
     </main>
+    {{ end }}
+
+    {{ if eq .Site.Params.frontpageVariant "microblog"}}
+    <div class="microblog-header">
+        <div>
+            {{ if .Site.Params.Portrait.Path }}
+                {{ $cacheKey := print .Site.Params.Portrait.Path (now.Format "Mon, 02 Jan 2006 15:04:05 MST") }}
+                {{ with resources.GetRemote .Site.Params.Portrait.Path (dict "key" $cacheKey) }}
+                {{ $portrait := .Resize "250x webp q90" }}
+                    <img src="data: {{ $portrait.MediaType }};base64, {{ $portrait.Content | base64Encode }}" class="circle" alt="{{ site.Params.Portrait.Alt }}" style="width:80px; height:80px" />
+                {{ end }}
+            {{ end }}
+        </div>
+        <div>
+            <h2>{{ .Site.Title }}
+            </h2>
+        </div>
+    </div>
+    <div class="microblog-posts">
+        {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Section" "Pages") }}
+        {{ range where .Site.Pages.ByDate.Reverse "Section" "posts"  }}
+            <div class="microblog-item">
+                {{ .Title }}
+                <div>
+                    <small>
+                        {{ .Date.Format "Mon, 02 Jan 2006 15:04:05 MST" }}
+                    </small>
+                </div>
+            </div>
+        {{ end }}
+    </div>
+    {{ end }}
 {{ end }}
