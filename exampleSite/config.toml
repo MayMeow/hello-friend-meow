@@ -102,6 +102,10 @@ disableHugoGeneratorInject = false
   ## verification
   verified = true
 
+  ## Frontpage variant
+  frontpageVariant = "microblog" # available values are blog and microblog
+  microblogDefaultPostType = "posts"
+
   # Colors for favicons
   [params.favicon.color]
     mask = "#24292e"

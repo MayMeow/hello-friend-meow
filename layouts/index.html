@@ -54,14 +54,15 @@
             </h2>
         </div>
     </div>
-    <div class="microblog-posts">
-        {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Section" "Pages") }}
-        {{ range where .Site.Pages.ByDate.Reverse "Section" "posts"  }}
+    <div class="microblog">
+        {{ range where .Site.Pages.ByDate.Reverse "Type" .Site.Params.microblogDefaultPostType  }}
             <div class="microblog-item">
-                {{ .Title }}
+                <div class="microblog-content">
+                    {{ .Title }}
+                </div>
                 <div>
                     <small>
-                        {{ .Date.Format "Mon, 02 Jan 2006 15:04:05 MST" }}
+                        <a href="{{ .Permalink }}">{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 MST" }}</a>
                     </small>
                 </div>
             </div>
