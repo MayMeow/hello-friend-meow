@@ -58,7 +58,7 @@
         {{ range where .Site.Pages.ByDate.Reverse "Type" .Site.Params.microblogDefaultPostType  }}
             <div class="microblog-item">
                 <div class="microblog-content">
-                    {{ .Title }}
+                    {{ .Content }}
                 </div>
                 <div>
                     <small>
