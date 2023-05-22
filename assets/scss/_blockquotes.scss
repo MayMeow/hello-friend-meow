@@ -1,0 +1,220 @@
+blockquote {
+    &.blockquote {
+        &-block {
+            border-radius: 8px;
+            margin: 40px 0px 40px 0px;
+        }
+
+        &-no-border {
+            border: 0px !important;
+        }
+
+        &-success {
+            @media (prefers-color-scheme: dark) {
+                background-color: $--color-success-subtle-dark;
+                border: 1px solid $--color-success-emphasis-dark;
+                color: $--color-success-fg-dark;
+            }
+    
+            @media (prefers-color-scheme: light) {
+                background-color: $--color-success-subtle;
+                border: 1px solid $--color-success-emphasis;
+                color: $--color-success-fg;
+            }
+    
+            [data-theme=dark] & {
+                background-color: $--color-success-subtle-dark;
+                border: 1px solid $--color-success-emphasis-dark;
+                color: $--color-success-fg-dark;
+            }
+            
+            [data-theme=light] & {
+                background-color: $--color-success-subtle;
+                border: 1px solid $--color-success-emphasis;
+                color: $--color-success-fg;
+            }
+        }
+    
+        &-danger {
+            @media (prefers-color-scheme: dark) {
+                background-color: $--color-danger-subtle-dark;
+                border: 1px solid $--color-danger-emphasis-dark;
+                color: $--color-danger-fg-dark;
+            }
+    
+            @media (prefers-color-scheme: light) {
+                background-color: $--color-danger-subtle;
+                border: 1px solid $--color-danger-emphasis;
+                color: $--color-danger-fg;
+            }
+    
+            [data-theme=dark] & {
+                background-color: $--color-danger-subtle-dark;
+                border: 1px solid $--color-danger-emphasis-dark;
+                color: $--color-danger-fg-dark;
+            }
+            
+            [data-theme=light] & {
+                background-color: $--color-danger-subtle;
+                border: 1px solid $--color-danger-emphasis;
+                color: $--color-danger-fg;
+            }
+        }
+
+        &-attention {
+            @media (prefers-color-scheme: dark) {
+                background-color: $--color-attention-subtle-dark;
+                border: 1px solid $--color-attention-emphasis-dark;
+                color: $--color-attention-fg-dark;
+            }
+    
+            @media (prefers-color-scheme: light) {
+                background-color: $--color-attention-subtle;
+                border: 1px solid $--color-attention-emphasis;
+                color: $--color-attention-fg;
+            }
+    
+            [data-theme=dark] & {
+                background-color: $--color-attention-subtle-dark;
+                border: 1px solid $--color-attention-emphasis-dark;
+                color: $--color-attention-fg-dark;
+            }
+            
+            [data-theme=light] & {
+                background-color: $--color-attention-subtle;
+                border: 1px solid $--color-attention-emphasis;
+                color: $--color-attention-fg;
+            }
+        }
+
+        &-severe {
+            @media (prefers-color-scheme: dark) {
+                background-color: $--color-severe-subtle-dark;
+                border: 1px solid $--color-severe-emphasis-dark;
+                color: $--color-severe-fg-dark;
+            }
+    
+            @media (prefers-color-scheme: light) {
+                background-color: $--color-severe-subtle;
+                border: 1px solid $--color-severe-emphasis;
+                color: $--color-severe-fg;
+            }
+    
+            [data-theme=dark] & {
+                background-color: $--color-severe-subtle-dark;
+                border: 1px solid $--color-severe-emphasis-dark;
+                color: $--color-severe-fg-dark;
+            }
+            
+            [data-theme=light] & {
+                background-color: $--color-severe-subtle;
+                border: 1px solid $--color-severe-emphasis;
+                color: $--color-severe-fg;
+            }
+        }
+
+        &-done {
+            @media (prefers-color-scheme: dark) {
+                background-color: $--color-done-subtle-dark;
+                border: 1px solid $--color-done-emphasis-dark;
+                color: $--color-done-fg-dark;
+            }
+    
+            @media (prefers-color-scheme: light) {
+                background-color: $--color-done-subtle;
+                border: 1px solid $--color-done-emphasis;
+                color: $--color-done-fg;
+            }
+    
+            [data-theme=dark] & {
+                background-color: $--color-done-subtle-dark;
+                border: 1px solid $--color-done-emphasis-dark;
+                color: $--color-done-fg-dark;
+            }
+            
+            [data-theme=light] & {
+                background-color: $--color-done-subtle;
+                border: 1px solid $--color-done-emphasis;
+                color: $--color-done-fg;
+            }
+        }
+
+        &-sponsors {
+            @media (prefers-color-scheme: dark) {
+                background-color: $--color-sponsors-subtle-dark;
+                border: 1px solid $--color-sponsors-emphasis-dark;
+                color: $--color-sponsors-fg-dark;
+            }
+    
+            @media (prefers-color-scheme: light) {
+                background-color: $--color-sponsors-subtle;
+                border: 1px solid $--color-sponsors-emphasis;
+                color: $--color-sponsors-fg;
+            }
+    
+            [data-theme=dark] & {
+                background-color: $--color-sponsors-subtle-dark;
+                border: 1px solid $--color-sponsors-emphasis-dark;
+                color: $--color-sponsors-fg-dark;
+            }
+            
+            [data-theme=light] & {
+                background-color: $--color-sponsors-subtle;
+                border: 1px solid $--color-sponsors-emphasis;
+                color: $--color-sponsors-fg;
+            }
+        }
+
+        &-neutral {
+            @media (prefers-color-scheme: dark) {
+                background-color: $--color-neutral-subtle-dark;
+                border: 1px solid $--color-neutral-emphasis-dark;
+                color: $--color-neutral-emphasis-plus-dark;
+            }
+    
+            @media (prefers-color-scheme: light) {
+                background-color: $--color-neutral-subtle;
+                border: 1px solid $--color-neutral-emphasis;
+                color: $--color-neutral-emphasis-plus;
+            }
+    
+            [data-theme=dark] & {
+                background-color: $--color-neutral-subtle-dark;
+                border: 1px solid $--color-neutral-emphasis-dark;
+                color: $--color-neutral-emphasis-plus-dark;
+            }
+            
+            [data-theme=light] & {
+                background-color: $--color-neutral-subtle;
+                border: 1px solid $--color-neutral-emphasis;
+                color: $--color-neutral-emphasis-plus;
+            }
+        }
+
+        &-accent {
+            @media (prefers-color-scheme: dark) {
+                background-color: $--color-accent-subtle-dark;
+                border: 1px solid $--color-accent-emphasis-dark;
+                color: $--color-accent-fg-dark;
+            }
+    
+            @media (prefers-color-scheme: light) {
+                background-color: $--color-accent-subtle;
+                border: 1px solid $--color-accent-emphasis;
+                color: $--color-accent-fg;
+            }
+    
+            [data-theme=dark] & {
+                background-color: $--color-accent-subtle-dark;
+                border: 1px solid $--color-accent-emphasis-dark;
+                color: $--color-accent-fg-dark;
+            }
+            
+            [data-theme=light] & {
+                background-color: $--color-accent-subtle;
+                border: 1px solid $--color-accent-emphasis;
+                color: $--color-accent-fg;
+            }
+        }
+    }
+}
