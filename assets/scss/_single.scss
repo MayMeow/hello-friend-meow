@@ -87,22 +87,22 @@
     font-family: 'Lato', 'Noto Sans KR', sans-serif;
 
     ul li::marker {
-      color: $pink-3;
+      color: var(--macchiato-Pink);
 
       @media (prefers-color-scheme: dark) {
-        color: $pink-3;
+        color: var(--macchiato-Pink);
       }
   
       @media (prefers-color-scheme: light) {
-        color: $pink-4;
+        color: var(--latte-Pink);
       }
   
       [data-theme=dark] & {
-        color: $pink-3;
+        color: var(--macchiato-Pink);
       }
       
       [data-theme=light] & {
-        color: $pink-4;
+        color: var(--latte-Pink);
       }
     }
 
