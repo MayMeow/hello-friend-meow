@@ -58,14 +58,14 @@
       </div>
     </article>
 
-    <blockquote class="blockquote-block blockquote-accent blockquote-no-border">
+    <!--<blockquote class="blockquote-block blockquote-accent blockquote-no-border">
       <p>
         &#x1F4E7;
         <a href="mailto:may@maymeow.com?subject=Reply to: {{ .Title }}">
           Reply by email
         </a>
       </p>
-    </blockquote>
+    </blockquote>-->
 
     <hr />
 
@@ -134,7 +134,7 @@
 
     {{ partial "pagination-single.html" . }}
 
-    <div class="panel panel-sponsor panel-centered">
+    <!--<div class="panel panel-sponsor panel-centered">
       <div class="panel-title">
         &#x1F495; Did you enjoy this post?
       </div>
@@ -144,7 +144,7 @@
           Thank You! &#x1F64F;
         </p>
       </div>
-    </div>
+    </div>-->
 
     {{ if .Site.DisqusShortname }}
       {{ if not (eq .Params.Comments "false") }}
