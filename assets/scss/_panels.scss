@@ -1,3 +1,4 @@
+/** Panels **/
 .panel {
     margin: 40px 0px 40px 0px;
     border: 1px solid #e5e5e5;
@@ -184,5 +185,55 @@
 .omgstatus {
     img {
         max-width: none;
+    }
+}
+
+/** Highlights **/
+
+.hli {
+    color: $dark-background;
+    padding: 0px 4px;
+    background-color: var(--macchiato-Yellow);
+
+    @media (prefers-color-scheme: dark) {
+        color: $dark-background;
+    }
+
+    @media (prefers-color-scheme: light) {
+        color: $light-color;
+    }
+
+    [data-theme=dark] & {
+        color: $dark-background;
+    }
+    
+    [data-theme=light] & {
+        color: $light-color;
+    }
+}
+
+.hlb {
+    display: block;
+    background-color: var(--macchiato-Yellow);
+    color: $dark-background;
+    padding: 5px;
+    max-width: 100%;
+    border: 4px solid var(--macchiato-Base);
+
+    p {
+        margin: 0px;
+        padding: 0px 5px;
+    }
+
+    strong {
+        color: inherit;
+    }
+
+    a {
+        color: inherit!important;
+
+        &:hover {
+            background-color: transparent!important;
+        }
     }
 }
