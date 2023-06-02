@@ -5,22 +5,24 @@ $light-background: var(--latte-Base);
 $light-background-secondary: var(--latte-Mantle);
 $light-background-header: var(--latte-Mantle);
 $light-color: var(--latte-Text);
-$light-color-variant: var(--latte-Base);
+$light-color-variant: var(--macchiato-Text);
 $light-color-secondary: var(--latte-Subtext0);
 $light-border-color: var(--latte-Surface0);
 $light-table-color: var(--latte-Surface0);
 $light-href-color: var(--latte-Mauve);
+$light-menu-hover-color: var(--latte-Pink);
 
 /* Dark theme colors */
 $dark-background: var(--macchiato-Mantle);
 $dark-background-secondary: var(--macchiato-Base);
 $dark-background-header: var(--macchiato-Base);
 $dark-color: var(--macchiato-Text);
-$dark-color-variant: var(--macchiato-Mantle);
+$dark-color-variant: var(--latte-Text);
 $dark-color-secondary: var(--macchiato-Subtext0);
 $dark-border-color: var(--macchiato-Surface0);
 $dark-table-color: var(--macchiato-Surface0);
 $dark-href-color: var(--macchiato-Green);
+$dark-menu-hover-color: var(--macchiato-Pink);
 
 $media-size-phone: "(max-width: 684px)";
 $media-size-tablet: "(max-width: 900px)";

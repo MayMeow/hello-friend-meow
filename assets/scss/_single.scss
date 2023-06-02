@@ -185,7 +185,26 @@
     margin-top: 30px;
     font-size: 0.8rem;
     line-height: normal;
-    @include dimmed;
+    color: var(--macchiato-Rosewater);
+    /*@include dimmed;*/
+
+    @media (prefers-color-scheme: dark) {
+      color: var(--macchiato-Rosewater);
+    }
+
+    @media (prefers-color-scheme: light) {
+      color: $light-color;
+      @include dimmed;
+    }
+
+    [data-theme=dark] & {
+      color: var(--macchiato-Rosewater);
+    }
+    
+    [data-theme=light] & {
+      color: $light-color;
+      @include dimmed;
+    }
 
     p {
       margin: 0.8em 0;

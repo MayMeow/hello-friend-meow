@@ -70,11 +70,31 @@
   a {
     display: inline-block;
     margin-right: 15px;
-    text-decoration: none;
+    text-decoration: underline;
 
     &:hover {
-      text-decoration: underline;
-      text-decoration-color: $blue-3;
+      background-color: $dark-menu-hover-color;
+      color: $dark-background;
+
+      @media (prefers-color-scheme: dark) {
+        background-color: $dark-menu-hover-color;
+        color: $dark-background;
+      }
+  
+      @media (prefers-color-scheme: light) {
+        background-color: $light-menu-hover-color;
+        color: $light-background;
+      }
+  
+      [data-theme=dark] & {
+        background-color: $dark-menu-hover-color;
+        color: $dark-background;
+      }
+      
+      [data-theme=light] & {
+        background-color: $light-menu-hover-color;
+        color: $light-background;
+      }
     }
 
     &:last-of-type {
