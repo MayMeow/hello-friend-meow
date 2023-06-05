@@ -10,19 +10,15 @@
         </div>
         <h1 class="post-headline mt-0">{{ .Title }}</h1>
 
-        <ul class="posts-list">
+        <div class="tags">
             {{ range .Pages }}
-            <li class="post-item">
-                <div>
-                    <a href="{{.Permalink}}">
-                        <span class="post-title">{{.Title}}</span>
-                    </a>
-                </div>
-                <div class="post-day">
+            <a href="{{.Permalink}}">
+                <span class="tags-title">{{.Title}}</span>
+                <span class="tags-items-count">
                     {{ len .Data.Pages }}
-                </div>
-            </li>
+                </span>
+            </a>
             {{ end }}
-        </ul>
+        </div>
     </main>
 {{ end }}
