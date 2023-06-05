@@ -64,6 +64,11 @@
 
     &-item {
       border-bottom: 1px var(--macchiato-Surface1) solid;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      padding: 1.063rem 0;
 
       @media (prefers-color-scheme: dark) {
         border-bottom: 1px var(--macchiato-Surface1) solid;
@@ -82,15 +87,33 @@
       }
 
       a {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        padding: 12px 0;
-        text-decoration: none;
+        text-decoration: underline;
         font-weight: 900;
 
         &:hover {
-          text-decoration: underline;
+          background-color: $dark-menu-hover-color;
+          color: $dark-background;
+
+          @media (prefers-color-scheme: dark) {
+            background-color: $dark-menu-hover-color;
+            color: $dark-background;
+          }
+      
+          @media (prefers-color-scheme: light) {
+            background-color: $light-menu-hover-color;
+            color: $light-background;
+          }
+      
+          [data-theme=dark] & {
+            background-color: $dark-menu-hover-color;
+            color: $dark-background;
+          }
+          
+          [data-theme=light] & {
+            background-color: $light-menu-hover-color;
+            color: $light-background;
+          }
+
         }
       }
 
