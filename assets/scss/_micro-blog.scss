@@ -8,9 +8,14 @@
     margin: 0 auto;
     gap: .3rem;
     padding: 0 20px;
-    margin: 20px 0;
+    margin: 2em 0;
 
     h2 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .baffle {
         margin: 0;
         padding: 0;
     }
@@ -47,8 +52,12 @@
         
         &-date {
             color: var(--latte-Pink);
-            margin-bottom: 1rem;
+            margin-bottom: .5rem;
             font-size: .8rem;
+            
+            a {
+                text-decoration: none;
+            }
         }
     }
 }

@@ -9,15 +9,17 @@
         {{ end }}
     </div>
     <div>
-        <h2>{{ .Site.Title }}
-        </h2>
+        <h2>{{ .Site.Title }}</h2>
+        {{- with .Site.Params.homeSubtitle }}
+            {{ partial "subtitle.html" . }}
+        {{- end }}
     </div>
 </div>
 <div class="microblog">
     {{ range where .Site.Pages.ByDate.Reverse "Type" .Site.Params.microblogDefaultPostType  }}
         <div class="microblog-item">
             <div class="microblog-item-date">
-                <a href="{{ .Permalink }}">{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 MST" }}</a>
+                <a href="{{ .Permalink }}">{{ .Date.Format "Jan 02, 2006" }}</a>
             </div>
             <div class="microblog-item-content">
                 {{ .Content }}
