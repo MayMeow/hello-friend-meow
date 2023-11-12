@@ -136,7 +136,29 @@ a.button {
     [data-theme=light] & {
         border: 1px solid #6e7781;
         color: $light-color !important;
-    }    
+    }
+  }
+
+  &.pink {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--macchiato-Pink);
+      color: var(--macchiato-Base )!important;
+    }
+
+    @media (prefers-color-scheme: light) {
+        background-color: var(--latte-Pink);
+        color: var(--latte-Base) !important;
+    }
+
+    [data-theme=dark] & {
+        background-color: var(--macchiato-Pink);
+        color: var(--macchiato-Base) !important;
+    }
+    
+    [data-theme=light] & {
+        background-color: var(--latte-Pink);
+        color: var(--latte-Base) !important;
+    }
   }
 
   &.button-big {
@@ -145,6 +167,18 @@ a.button {
     font-weight: 400;
   }
 
+  &.button-fluid {
+    width: 100%;
+    align-items: start;
+    justify-content: start;
+  }
+
+}
+
+a {
+  &.mail-button {
+    text-decoration: none;
+  }
 }
 
 .code-toolbar {

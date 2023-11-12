@@ -22,6 +22,10 @@
         <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
       </h1>
 
+      {{- if .Params.ai_summary }}
+        {{ partial "ai-summary.html" .Params.ai_summary }}
+      {{- end }}
+
       {{ with .Params.Description }}
         <div class="post-excerpt">{{ . }}</div>
       {{ end }}
@@ -58,16 +62,31 @@
       </div>
     </article>
 
-    <!--<blockquote class="blockquote-block blockquote-accent blockquote-no-border">
-      <p>
-        &#x1F4E7;
-        <a href="mailto:may@maymeow.com?subject=Reply to: {{ .Title }}">
-          Reply by email
-        </a>
-      </p>
-    </blockquote>-->
+    <p>
 
-    <hr />
+    {{ if and (eq .Site.Params.ReplyTo.Enabled true) (ne .Site.Params.ReplyTo.Email "") }}
+      <a class="mail-button" href="mailto:{{ .Site.Params.ReplyTo.Email }}?subject=Reply to: {{ .Title }}">
+        <button>
+          &#x1F4E7; Reply by email
+        </button>
+      </a>
+    {{ end }}
+
+
+    {{- with .Site.Params.Newsletter }}
+      {{ if ne .Url ""}}
+      <a class="mail-button" href="{{ .Url }}">
+        <button>
+          &#x1F4EE; Subscribe to My newsletter
+        </button>
+      </a>
+      {{ end }}
+    {{- end }}
+
+      
+    </p>
+
+    <!--<hr />-->
 
     <div class="post-info">
       {{ partial "tags.html" .Params.tags }}
