@@ -369,8 +369,12 @@ ol ol {
     background-color: $light-background;
   }
 
-  clip-path: polygon(0 20px,100% 0,100% calc(100% - 20px),0 100%);
-  --webkit-clip-path: polygon(0 20px,100% 0,100% calc(100% - 20px),0 100%);
+  //clip-path: polygon(0 20px,100% 0,100% calc(100% - 20px),0 100%);
+  //--webkit-clip-path: polygon(0 20px,100% 0,100% calc(100% - 20px),0 100%);
+
+  // v 2.0
+  clip-path: polygon(0 0,100% 20px,100% 100%,0 100%);
+  --webkit-clip-path: polygon(0 0,100% 20px,100% 100%,0 100%);
 
   @media #{$media-size-phone} {
     margin-top: 0;
