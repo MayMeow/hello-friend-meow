@@ -64,25 +64,22 @@
 
     <p>
 
-    {{ if and (eq .Site.Params.ReplyTo.Enabled true) (ne .Site.Params.ReplyTo.Email "") }}
-      <a class="mail-button" href="mailto:{{ .Site.Params.ReplyTo.Email }}?subject=Reply to: {{ .Title }}">
-        <button>
-          &#x1F4E7; Reply by email
-        </button>
-      </a>
-    {{ end }}
+      <nav class="post-nav">
+        {{ if and (eq .Site.Params.ReplyTo.Enabled true) (ne .Site.Params.ReplyTo.Email "") }}
+          <a href="mailto:{{ .Site.Params.ReplyTo.Email }}?subject=Reply to: {{ .Title }}">
+              &#x1F4E7; Reply by email
+          </a>
+        {{ end }}
 
 
-    {{- with .Site.Params.Newsletter }}
-      {{ if ne .Url ""}}
-      <a class="mail-button" href="{{ .Url }}">
-        <button>
-          &#x1F4EE; Subscribe to My newsletter
-        </button>
-      </a>
-      {{ end }}
-    {{- end }}
-
+        {{- with .Site.Params.Newsletter }}
+          {{ if ne .Url ""}}
+          <a href="{{ .Url }}">
+              &#x1F4EE; Subscribe to My newsletter
+          </a>
+          {{ end }}
+        {{- end }}
+      </nav>
       
     </p>
 

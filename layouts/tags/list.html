@@ -12,12 +12,14 @@
 
         <div class="tags">
             {{ range .Pages }}
-            <a href="{{.Permalink}}">
-                <span class="tags-title">{{.Title}}</span>
-                <span class="tags-items-count">
-                    {{ len .Data.Pages }}
-                </span>
-            </a>
+
+                <a href="{{.Permalink}}">
+                    <span class="tags-title">{{.Title}}</span>
+                    <!--<span class="tags-items-count">
+                        {{ len .Data.Pages }}
+                    </span>-->
+                </a>
+
             {{ end }}
         </div>
     </main>
