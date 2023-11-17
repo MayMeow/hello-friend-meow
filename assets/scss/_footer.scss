@@ -3,6 +3,24 @@
   flex-grow: 0;
   color: $light-color-secondary;
 
+  background-color: var(--macchiato-Mantle);
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $dark-background;
+  }
+
+  @media (prefers-color-scheme: light) {
+    background-color: $light-background;
+  }
+
+  [data-theme=dark] & {
+    background-color: $dark-background;
+  }
+
+  [data-theme=light] & {
+    background-color: $light-background;
+  }
+
   &__inner {
     display: flex;
     align-items: center;
