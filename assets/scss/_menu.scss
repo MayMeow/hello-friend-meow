@@ -184,3 +184,34 @@
     display: block;
   }
 }
+
+// Header menu 2.0
+.new-menu {
+  margin-top: 20px;
+  grid-gap: 8px;
+    grid-template-columns: repeat(4,1fr);
+    display: grid;
+
+    @media #{$media-size-phone} {
+      grid-template-columns: repeat(2,1fr);
+    }
+
+    a {
+      padding: 5px 10px;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: .8em;
+      font-weight: 600;
+      text-align: center;
+      text-transform: lowercase;
+
+      background-color: var(--latte-Sky);
+      color: var(--latte-Base);
+      border-radius: 8px;
+
+      &:hover {
+        color: var(--macchiato-Base);
+        background-color: var(--latte-Pink);
+      }
+    }
+}

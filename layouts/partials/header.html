@@ -1,8 +1,7 @@
 <header class="header">
     <span class="header__inner">
         {{ partial "logo.html" . }}
-
-        <span class="header__right">
+        <!--<span class="header__right">
             {{ if len .Site.Menus }}
                 {{ partial "menu.html" . }}
                 <span class="menu-trigger">
@@ -16,6 +15,14 @@
             {{- if .Site.Params.EnableThemeToggle }}
                 <span class="theme-toggle not-selectable">{{ partial "theme-toggle-icon.html" . }}</span>
             {{- end}}
-        </span>
+        </span>-->
+
+        <nav class="new-menu">
+            {{ range .Site.Menus.main -}}
+                <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+            {{- end }}
+        </nav>
     </span>
 </header>
+
+

@@ -28,8 +28,10 @@ body {
   min-height: 100vh;
   flex-direction: column;
 
+  // background-image: linear-gradient(to right, rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234));
+
   // Default
-  background-color: $light-background;
+  background-color: $light-background-header;
   color: $light-color;
 
   @media #{$media-size-phone} {
@@ -37,22 +39,22 @@ body {
   }
 
   @media (prefers-color-scheme: dark) {
-    background-color: $dark-background;
+    background-color: $dark-background-header;
     color: $dark-color;
   }
 
   @media (prefers-color-scheme: light) {
-    background-color: $light-background;
+    background-color: $light-background-header;
     color: $light-color;
   }
 
   [data-theme=dark] & {
-    background-color: $dark-background;
+    background-color: $dark-background-header;
     color: $dark-color;
   }
 
   [data-theme=light] & {
-    background-color: $light-background;
+    background-color: $light-background-header;
     color: $light-color;
   }
 }
@@ -349,6 +351,26 @@ ol ol {
   align-items: center;
   justify-content: center;
   margin: 0;
+  background-color: var(--macchiato-Mantle);
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $dark-background;
+  }
+
+  @media (prefers-color-scheme: light) {
+    background-color: $light-background;
+  }
+
+  [data-theme=dark] & {
+    background-color: $dark-background;
+  }
+
+  [data-theme=light] & {
+    background-color: $light-background;
+  }
+
+  clip-path: polygon(0 20px,100% 0,100% calc(100% - 20px),0 100%);
+  --webkit-clip-path: polygon(0 20px,100% 0,100% calc(100% - 20px),0 100%);
 
   @media #{$media-size-phone} {
     margin-top: 0;
@@ -464,4 +486,8 @@ hr {
   [data-theme=light] & {
     color: var(--latte-Green);
   }
+}
+
+.profile {
+  margin: 30px 0;
 }

@@ -5,24 +5,7 @@
   position: relative;
   padding: 20px;
   // Default
-  background: $light-background-header;
-
-  @media (prefers-color-scheme: dark) {
-    background: $dark-background-header;
-  }
-
-  @media (prefers-color-scheme: light) {
-    background: $light-background-header;
-  }
-
-  [data-theme=dark] & {
-    background: $dark-background-header;
-  }
-
-  [data-theme=light] & {
-    background: $light-background-header;
-  }
-
+  
   &__right {
     display: flex;
     flex-direction: row;
@@ -34,11 +17,13 @@
   }
 
   &__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    // display: flex;
+    //align-items: start;
+    //flex-direction: column;
+    //justify-content: space-between;
+    //gap: 10px;
     margin: 0 auto;
-    width: 760px; /*760px default*/
+    width: var(--header-width); /*760px default*/
     max-width: 100%;
   }
 }
