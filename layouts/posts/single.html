@@ -1,26 +1,15 @@
 {{ define "main" }}
-  <main class="post">
 
-    <div class="post-info">
-      <p>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
-          <circle cx="12" cy="12" r="10"></circle>
-          <polyline points="12 6 12 12 16 14"></polyline>
-        </svg>
-        {{ i18n "readingTime" .Page.ReadingTime }}
-
-        {{ if .IsTranslated }} | {{ i18n "postAvailable" }}
-          {{ range .Translations }}
-              <a href="{{ .Permalink }}"><span class="flag flag-icon flag-icon-{{ index $.Site.Data.langFlags (.Lang) }} flag-icon-squared"></span></a>
-          {{ end}}
-        {{ end }}
-      </p>
-    </div>
-
-    <article>
-      <h1 class="post-title post-headline">
+  <div class="title-container polygon">
+    <div class="post">
+      <h1 class="title-container__title">
         <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
       </h1>
+    </div>
+  </div>
+
+  <main class="post">
+    <article>
 
       {{- if .Params.ai_summary }}
         {{ partial "ai-summary.html" .Params.ai_summary }}
@@ -164,6 +153,14 @@
         </p>
       </div>
     </div>-->
+
+    <div class="polygon">
+      <div class="polygon-content">
+        <p>
+          <a href="#"> Follow me on Mastodon</a> or <a href="#">Subscribe my RSS</a>
+        </p>
+      </div>
+    </div>
 
     {{ if .Site.DisqusShortname }}
       {{ if not (eq .Params.Comments "false") }}

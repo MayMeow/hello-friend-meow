@@ -150,71 +150,22 @@
     gap: .3rem;
 
     a {
-      padding: .2rem .4rem;
+      padding: 5px 10px;
       text-decoration: none;
       font-weight: 400;
+      text-transform: lovercase;
+      font-size: .8em;
+      border-radius: 8px;
+      color: var(--latte-Base);
+      font-weight: 700;
       
-      background-color: $dark-background-secondary;
-      border: 1px solid var(--macchiato-Surface1);
+      background-color: var(--latte-Blue);
+      // border: 1px solid var(--macchiato-Surface1);
 
       &:hover {
-        border: 1px solid var(--macchiato-Green);
-      }
-
-      @media (prefers-color-scheme: dark) {
-        background-color: $dark-background-secondary;
-        border: 1px solid var(--macchiato-Surface1);
-
-        &:hover {
-          border: 1px solid var(--macchiato-Green);
-        }
-      }
-
-      [data-theme=dark] & {
-        background-color: $dark-background-secondary;
-        border: 1px solid var(--macchiato-Surface1);
-
-        &:hover {
-          border: 1px solid var(--macchiato-Green);
-        }
-      }
-
-      @media (prefers-color-scheme: light) {
-        background-color: $light-background-secondary;
-        border: 1px solid var(--latte-Surface1);
-
-        &:hover {
-          border: 1px solid var(--latte-Green);
-        }
-      }
-
-      [data-theme=light] & {
-        background-color: $light-background-secondary;
-        border: 1px solid var(--latte-Surface1);
-
-        &:hover {
-          border: 1px solid var(--latte-Green);
-        }
-      }
-    }
-
-    &-items-count {
-      color: var(--macchiato-Green);
-
-      @media (prefers-color-scheme: dark) {
-        color: var(--macchiato-Green);
-      }
-
-      [data-theme=dark] & {
-        color: var(--macchiato-Green);
-      }
-
-      @media (prefers-color-scheme: light) {
-        color: var(--latte-Subtext0);
-      }
-
-      [data-theme=light] & {
-        color: var(--latte-Subtext0);
+        // border: 1px solid var(--macchiato-Green);
+        background-color: var(--latte-Pink);
+        color: var(--macchiato-Base);
       }
     }
   }
