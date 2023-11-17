@@ -21,8 +21,7 @@
     flex-direction: row;
     align-items: center;
     font-size: 1rem;
-    color: var(--macchiato-Subtext0);
-    font-weight: 700;
+    color: $light-color-secondary;
 
     @media #{$media-size-tablet} {
       flex-direction: column;
@@ -32,7 +31,6 @@
     & > *:not(:last-child)::after {
       content: "•";
       padding: 0 5px;
-      color: var(--latte-Pink);
 
       @media #{$media-size-tablet} {
           content: "";
