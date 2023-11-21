@@ -513,8 +513,11 @@ hr {
     &__badge {
       height: 100%;
       margin-bottom: 10px;
-      fill: var(--macchiato-Red);
-      --webkit-fill: var(--macchiato-Red);
+
+      a, a:visited, a:active {
+        color: var(--macchiato-Red);
+        --webkit-color: var(--macchiato-Red);
+      }
     }
   }
 }
