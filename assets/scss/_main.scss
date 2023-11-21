@@ -500,7 +500,7 @@ hr {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
 
     &__container {
       background-color: #21759b;
@@ -512,7 +512,8 @@ hr {
 
     &__badge {
       height: 100%;
-      margin-bottom: 1em;
+      margin-bottom: 10px;
+      // opacity: 80%;
     }
   }
 }
