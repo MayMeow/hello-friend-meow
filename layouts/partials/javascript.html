@@ -14,3 +14,7 @@
         <script src="{{ $val }}"></script>
     {{ end }}
 {{ end }}
+
+{{ if .Site.Params.Tinylytics }}
+    <script src="https://tinylytics.app/embed/{{ .Site.Params.Tinylytics }}.js" defer></script>
+{{ end }}
