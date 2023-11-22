@@ -1,0 +1,40 @@
+{{ define "main" }}    
+    <main class="posts">
+        <div>
+            {{ $count := len .Data.Pages }}
+            {{ if (eq $count 1) }}
+                <span class="fc-green">{{ $count }}</span> status in:
+            {{ else }}
+                <span class="fc-green">{{ $count }}</span> statuses in:
+            {{ end }}
+        </div>
+        <h1 class="post-headline mt-0">{{ .Title }}</h1>
+
+        <p>
+            This is a mirror of my <a href="https://may.status.lol/">statuslog</a> page.
+        </p>
+
+            {{ range .Pages }}
+                <div class="statuslog">
+                    <span>
+                        {{ .Params.Emoji }} {{ .Content }}
+                    </span>
+                    <div class="statuslog-links">
+                        <span>
+                            <a href="https://may.status.lol/{{ .Params.Id }}">
+                                <span class="tags-title">{{ .Params.Date }}</span>
+                            </a>
+                        </span>
+                        {{ if ne .Params.External_url "null" }}
+                            <span>
+                                <a href="{{ .Params.External_url }}">
+                                    <span class="tags-title">conversation</span>
+                                </a>
+                            </span>
+                        {{ end }}
+                    </div>
+                </div>
+            {{ end }}
+
+    </main>
+{{ end }}
