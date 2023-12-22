@@ -1,0 +1,19 @@
+<div class="project-card">
+    <div class="project-card__tags">
+        {{ with .Get "tags" }}
+        {{ range $_, $v := split . "," }}
+            <span>{{ $v }}</span>
+        {{ end }}
+        {{ end }}
+    </div>
+    {{ if isset .Params "name"}}
+        {{ if isset .Params "url" }}
+            <h3><a href="{{ .Get "url" }}">{{ .Get "name" }}</a></h3>
+        {{ else }}
+            <h3>{{ .Get "name" }}</h3>
+        {{ end }}
+    {{ end }}
+
+    <div>{{ .Inner }}</div>
+</div>
+
