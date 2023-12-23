@@ -1,0 +1,71 @@
+.project-card {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  
+    padding: 20px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: .8em;
+    font-weight: 600; 
+    max-width: 100%;
+    width: 100%;
+    aspect-ratio: 3 / 1;
+  
+    @media #{$media-size-phone} {
+      aspect-ratio: 5 / 4;
+    }
+  
+    background-color: var(--latte-Lavender);
+    color: var(--latte-Base);
+    border-radius: 8px;
+  
+    &:hover {
+      color: var(--macchiato-Base);
+      background-color: var(--latte-Pink);
+    }
+  
+    h3 {
+      margin: 0;
+      padding: 0;
+      color: inherit;
+      margin-bottom: 30px;
+    }
+  
+    a {
+      color: inherit;
+  
+      &:hover {
+        color: inherit;
+        background-color: transparent;
+      }
+    }
+  
+    &__title {
+      text-align: center;
+      font-size: 1.5rem;
+      font-family: 'VC Honey Deck', 'Noto Serif KR', serif;
+    }
+  
+    &__tags {
+      line-height: 2.5em;
+      span {
+        font-size: 1rem;
+        padding: 5px 10px;
+        border-radius: 8px;
+        color: var(--latte-Base);
+        background-color: var(--macchiato-Base);
+      }
+      margin-bottom: 20px;
+    }
+  
+    &__links {
+      width: 100%;
+      text-align: left;
+      a {
+        font-weight: bold;
+      }
+    }
+  }

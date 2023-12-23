@@ -6,13 +6,16 @@
         {{ end }}
         {{ end }}
     </div>
+
+    <div class="project-card__title">
     {{ if isset .Params "name"}}
         {{ if isset .Params "url" }}
-            <h3><a href="{{ .Get "url" }}">{{ .Get "name" }}</a></h3>
+            <a href="{{ .Get "url" }}">{{ .Get "name" }}</a>
         {{ else }}
-            <h3>{{ .Get "name" }}</h3>
+            {{ .Get "name" }}
         {{ end }}
     {{ end }}
+    </div>
 
     <div>{{ .Inner }}</div>
 </div>
