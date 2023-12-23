@@ -180,6 +180,24 @@
       display: inline;
     }
 
+    &-info {
+      margin-bottom: 40px;
+      p {
+        margin: 0;
+        padding: 0;
+        display: inline;
+      }
+
+      a {
+        color: var(--macchiato-Green);
+      }
+    }
+
+    &-count {
+      color: var(--macchiato-Green);
+      font-weight: 600;
+    }
+
     &-links {
       margin-top: 8px;
       display: flex;

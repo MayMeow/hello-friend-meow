@@ -1,0 +1,39 @@
+<div>
+{{ $posts := where site.RegularPages "Type" "posts" }}
+{{ $statuses := where site.RegularPages "Type" "statuslog" }}
+{{ $titlePostsCount := len ( where $posts ".Params.title"  "!=" nil ) }}
+{{ $microPostsCount := len ( where $posts ".Params.title"  "=" nil ) }}
+
+{{ $scratch := newScratch }}
+    {{ $scratch.Set "longCount" 0 }}
+        {{ range $posts }}
+        {{ $scratch.Add "wordcount" .WordCount }}
+        {{ if ge .WordCount ($scratch.Get "longCount") }}
+        {{ $scratch.Set "longestPost" . }}
+        {{ $scratch.Set "longCount" .WordCount }}
+    {{ end }}
+{{ end }}
+
+{{ $postCount :=  len ($posts) }}
+{{ $wordCount := $scratch.Get "wordcount" }}
+{{ $avgPostLength := div $wordCount $postCount }}
+
+Posts: {{ $titlePostsCount | lang.NumFmt 0 }}
+<br>
+Statuses: {{ len $statuses | lang.NumFmt 0 }}
+<br>
+Words: {{ $wordCount | lang.NumFmt 0 }}
+<br>
+Words per post: {{ $avgPostLength | lang.NumFmt 0 }}
+<br><br>
+{{ with $scratch.Get "longestPost" }}
+Longest post: {{ if .Title }}<a href="{{ .Permalink }}">{{ .Title }}</a> with {{ .WordCount }} words
+{{ end }}
+{{ end }}
+<br>
+
+{{ range last 1 $posts }}
+First post: {{ if .Title }}<a href="{{ .Permalink }}">{{ .Title }}</a> published on {{ .Date.Format "2006-01-02" }}
+{{ end }}
+{{ end }}
+</div>
