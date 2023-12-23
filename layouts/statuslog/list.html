@@ -1,18 +1,26 @@
 {{ define "main" }}    
     <main class="posts">
-        <div>
-            {{ $count := len .Data.Pages }}
-            {{ if (eq $count 1) }}
-                <span class="fc-green">{{ $count }}</span> status in:
-            {{ else }}
-                <span class="fc-green">{{ $count }}</span> statuses in:
-            {{ end }}
-        </div>
+        {{ $count := len .Data.Pages }}
+        I have sent a total of
+        {{ if (eq $count 1) }}
+            <span class="statuslog-count">{{ $count }}</span> status.
+        {{ else }}
+            <span class="statuslog-count">{{ $count }}</span> statuses so far.
+        {{ end }}
+
         <h1 class="post-headline mt-0">{{ .Title }}</h1>
 
-        <p>
-            This is a mirror of my <a href="https://may.status.lol/">statuslog</a> page.
-        </p>
+        <div class="statuslog-info">
+            {{ .Content }}
+            <br>
+            {{ range last 1 .Pages }}
+                My first status was published on <span class="statuslog-count">{{ .Params.Date.Format "Jan 02 2006" }}</span>
+            {{ end }}
+
+            {{ range first 1 .Pages }}
+                and my last on <span class="statuslog-count">{{ .Params.Date.Format "Jan 02 2006" }}</span>
+            {{ end }}
+        </div>
 
             {{ range .Pages }}
                 <div class="statuslog">
@@ -22,7 +30,7 @@
                     <div class="statuslog-links">
                         <span>
                             <a href="https://may.status.lol/{{ .Params.Id }}">
-                                <span class="tags-title">{{ .Params.Date }}</span>
+                                <span class="tags-title">{{ .Params.Date.Format "Jan 02 2006 15:04" }}</span>
                             </a>
                         </span>
                         {{ if ne .Params.External_url "null" }}
