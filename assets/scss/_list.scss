@@ -173,7 +173,7 @@
   }
 
   .statuslog {
-    margin: 8px 0 0 0;
+    margin: 0 0 40px 0;
     p {
       padding: 0;
       margin: 0;
@@ -199,13 +199,11 @@
     }
 
     &-links {
-      margin-top: 8px;
       display: flex;
       flex-direction: row;
       justify-content: start;
       gap: 8px;
       a {
-        font-size: .8em;
         color: var(--latte-Pink);
       }
     }

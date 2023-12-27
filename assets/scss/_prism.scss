@@ -6,7 +6,7 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
-    color: var(--macchiato-Text);
+    color: var(--macchiato-Peach);
     background: none;
     /*text-shadow: 0 1px rgba(0, 0, 0, 0.3);8/ */
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
@@ -91,7 +91,7 @@ pre[class*="language-"] {
 .language-css .token.string,
 .style .token.string,
 .token.variable {
-    color: var(--macchiato-Subtext1);
+    color: var(--macchiato-Lavender);
 }
 
 .token.atrule,
