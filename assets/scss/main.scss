@@ -10,19 +10,19 @@
 @import "header";
 @import "logo";
 @import "menu";
-@import "main";
-@import "list";
+@import "main"; // ? What is .fc-green ????
+@import "list"; // * PUT status log to own file
 @import "single";
-@import "footer";
+@import "footer"; // ? Footer widht??
 @import "sharing-buttons";
 @import "tables";
 @import "404";
 /* Highlight */
 
-// @import "blockquotes";
-@import "panels";
+//!! TODO Remove @import "blockquotes"; 
+// !! TODO Remove @import "panels";
 
-@import "micro-blog";
+//!! TODO remove @import "micro-blog";
 
 @import "prism";
 

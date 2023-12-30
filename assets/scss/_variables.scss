@@ -79,6 +79,10 @@ $machiato-green: #a6da95;
   --post-item-link-hover-text: #{$machiato-base}; // both schemes
   --post-item-day-color: #{$latte-subtext0};
 
+  // posts graph
+  --posts-graph-text-color: #{$latte-text};
+  --posts-graph-box-has-post-color: #{$latte-pink}; // both schemes
+
   // same on both themes -->
   --new-button-bg: #{$latte-sky};
   --new-button-bg-hover: #{$latte-pink};
@@ -146,6 +150,9 @@ $machiato-green: #a6da95;
     //lists
     --post-item-border-color: #{$machiato-surface1};
     --post-item-day-color: #{$machiato-green};
+
+    // posts graph
+    --posts-graph-text-color: #{$machiato-text};
     // <-- new
 
   // colors

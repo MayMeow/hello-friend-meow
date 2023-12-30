@@ -1,22 +1,14 @@
 .epg {
-    color: var(--macchiato-Text);
+    color: var(--posts-graph-text-color);
     margin: 20px 0;
     font-size: 0.8em;
 
-    @media (prefers-color-scheme: dark) {
-        color: var(--macchiato-Text);
-    }
-
-    @media (prefers-color-scheme: light) {
-        color: var(--latte-Text);
-    }
-
     [data-theme=dark] & {
-        color: var(--macchiato-Text);
+        color: var(--posts-graph-text-color);
     }
     
     [data-theme=light] & {
-        color: var(--latte-Text);
+        color: var(--posts-graph-text-color);
     }
 
     &__year {
@@ -42,22 +34,14 @@
 
     &__box {
         aspect-ratio: 1 / 1;
-        background: var(--macchiato-Base);
-
-        @media (prefers-color-scheme: dark) {
-            background: var(--macchiato-Base);
-        }
-    
-        @media (prefers-color-scheme: light) {
-            background: var(--latte-Mantle);
-        }
+        background: var(--page-background);
     
         [data-theme=dark] & {
-            background: var(--macchiato-Base);
+            background: var(--page-background);
         }
         
         [data-theme=light] & {
-            background: var(--latte-Mantle);
+            background: var(--page-background);
         }
     }
 
@@ -66,6 +50,6 @@
     }
 
     &__hasPost {
-        background: var(--latte-Pink);
+        background: var(--posts-graph-box-has-post-color);
     }
 }
