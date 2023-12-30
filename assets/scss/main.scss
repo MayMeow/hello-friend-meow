@@ -20,7 +20,7 @@
 /* Highlight */
 
 //!! TODO Remove @import "blockquotes"; 
-// !! TODO Remove @import "panels";
+//!! TODO Remove @import "panels";
 
 //!! TODO remove @import "micro-blog";
 
@@ -29,4 +29,4 @@
 @import "details";
 
 @import "post-graph";
-@import "project-card";
+//!! remove unused@import "project-card";
