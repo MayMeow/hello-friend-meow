@@ -1,24 +1,15 @@
 .footer {
   padding: 40px 20px;
   flex-grow: 0;
-  color: $light-color-secondary;
-
-  background-color: var(--macchiato-Mantle);
-
-  @media (prefers-color-scheme: dark) {
-    background-color: $dark-background;
-  }
-
-  @media (prefers-color-scheme: light) {
-    background-color: $light-background;
-  }
+  color: var(--text-secondary);
+  background-color: var(--content-background);
 
   [data-theme=dark] & {
-    background-color: $dark-background;
+    background-color: var(--content-background);
   }
 
   [data-theme=light] & {
-    background-color: $light-background;
+    background-color: var(--content-background);
   }
 
   &__inner {
@@ -39,7 +30,7 @@
     flex-direction: row;
     align-items: center;
     font-size: 1rem;
-    color: $light-color-secondary;
+    color: var(--text-secondary);
     font-weight: 600;
 
     @media #{$media-size-tablet} {

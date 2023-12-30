@@ -36,6 +36,7 @@ $latte-pink: #ea76cb;
 $latte-text: #4c4f69;
 $latte-subtext0: #6c6f85;
 $latte-surface0: #ccd0da;
+$latte-surface1: #bcc0cc;
 $latte-yellow: #df8e1d;
 
 // dark theme Machiato
@@ -44,7 +45,9 @@ $machiato-mantle: #1e2030;
 $machiato-text: #cad3f5;
 $machiato-subtext0: #a5adcb;
 $machiato-surface0: #363a4f;
+$machiato-surface1: #494d64;
 $machiato-crust: #181926;
+$machiato-green: #a6da95;
 // <-- KEEP
 
 /* Variables for js, must be the same as these in @custom-media queries */
@@ -52,7 +55,9 @@ $machiato-crust: #181926;
   // original
   --phoneWidth: #{$media-size-phone}; //do @include media-phone instead
   --tabletWidth: #{$media-size-tablet}; // use @include media-tablet instead
+
   --header-width: 1200px;
+  --content-width: 800px;
   --radius: .5rem;
 
   // new -->
@@ -68,14 +73,26 @@ $machiato-crust: #181926;
   --border-color: #{$latte-surface0};
   --table-border-color: #{$latte-surface0};
 
+  // lists
+  --post-item-border-color: #{$latte-surface1};
+  --post-item-link-hover-color: #{$latte-pink}; // both schemes
+  --post-item-link-hover-text: #{$machiato-base}; // both schemes
+  --post-item-day-color: #{$latte-subtext0};
+
   // same on both themes -->
   --new-button-bg: #{$latte-sky};
   --new-button-bg-hover: #{$latte-pink};
   --new-button-text: #{$latte-base};
   --new-button-text-hover: #{$machiato-base};
 
+  // details
   --details-bg: #{$latte-yellow};
   --details-text: #{$machiato-crust};
+
+  // statuslog
+  --statuslog-info-link-color: #{$machiato-green};
+  --statuslog-info-count-color: #{$machiato-green};
+  --statuslog-items-links-color: #{$latte-pink};
   // <-- new
 
   // colors
@@ -125,6 +142,10 @@ $machiato-crust: #181926;
     // borders
     --border-color: #{$machiato-surface0};
     --table-border-color: #{$machiato-surface0};
+
+    //lists
+    --post-item-border-color: #{$machiato-surface1};
+    --post-item-day-color: #{$machiato-green};
     // <-- new
 
   // colors
