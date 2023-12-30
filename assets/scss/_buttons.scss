@@ -22,24 +22,19 @@ a.button {
   cursor: pointer;
   outline: none;
   // Default
-  background: $light-background-header;
+  background: var(--page-background);
 
   @media (prefers-color-scheme: dark) {
-    background: $dark-background-header;
     color: inherit;
   }
 
-  @media (prefers-color-scheme: light) {
-    background: $light-background-header;
-  }
-
   [data-theme=dark] & {
-    background: $dark-background-header;
+    background: var(--page-background);
     color: inherit;
   }
 
   [data-theme=light] & {
-    background: $light-background-header;
+    background: var(--page-background);
   }
 
   &.outline {
@@ -47,24 +42,19 @@ a.button {
     box-shadow: none;
     padding: 8px 18px;
     // Default
-    border-color: $light-background-secondary;
+    border-color: var(--page-background);
 
     @media (prefers-color-scheme: dark) {
-      border-color: $dark-background-secondary;
       color: inherit;
     }
   
-    @media (prefers-color-scheme: light) {
-      border-color: $light-background-secondary;
-    }
-  
     [data-theme=dark] & {
-      border-color: $dark-background-secondary;
+      border-color: var(--page-background);
       color: inherit;
     }
   
     [data-theme=light] & {
-      border-color: $light-background-secondary;
+      border-color: var(--page-background);
     }
 
     :hover {
@@ -94,85 +84,6 @@ a.button {
     min-width: 200px;
     padding: 14px 24px;
   }
-
-  &.outline-danger {
-    @media (prefers-color-scheme: dark) {
-      border: 1px solid #f85149;
-      color: #f85149 !important;
-    }
-
-    @media (prefers-color-scheme: light) {
-        border: 1px solid #cf222e;
-        color: #cf222e !important;
-    }
-
-    [data-theme=dark] & {
-        border: 1px solid #f85149;
-        color: #f85149 !important;
-    }
-    
-    [data-theme=light] & {
-        border: 1px solid #cf222e;
-        color: #cf222e !important;
-    }    
-  }
-
-  &.outline-neutral {
-    @media (prefers-color-scheme: dark) {
-      border: 1px solid #6e7681;
-      color: $dark-color !important;
-    }
-
-    @media (prefers-color-scheme: light) {
-        border: 1px solid #6e7781;
-        color: $light-color !important;
-    }
-
-    [data-theme=dark] & {
-        border: 1px solid #6e7681;
-        color: $dark-color !important;
-    }
-    
-    [data-theme=light] & {
-        border: 1px solid #6e7781;
-        color: $light-color !important;
-    }
-  }
-
-  &.pink {
-    @media (prefers-color-scheme: dark) {
-      background-color: var(--macchiato-Pink);
-      color: var(--macchiato-Base )!important;
-    }
-
-    @media (prefers-color-scheme: light) {
-        background-color: var(--latte-Pink);
-        color: var(--latte-Base) !important;
-    }
-
-    [data-theme=dark] & {
-        background-color: var(--macchiato-Pink);
-        color: var(--macchiato-Base) !important;
-    }
-    
-    [data-theme=light] & {
-        background-color: var(--latte-Pink);
-        color: var(--latte-Base) !important;
-    }
-  }
-
-  &.button-big {
-    font-size: 1.5rem;
-    padding: 14px 24px;
-    font-weight: 400;
-  }
-
-  &.button-fluid {
-    width: 100%;
-    align-items: start;
-    justify-content: start;
-  }
-
 }
 
 a {
@@ -201,39 +112,19 @@ a {
     cursor: pointer;
     outline: none;
     // Default
-    background: $light-background-secondary;
+    background: var(--page-background);
 
     @media (prefers-color-scheme: dark) {
-      background: $dark-background-secondary;
       color: inherit;
     }
   
-    @media (prefers-color-scheme: light) {
-      background: $light-background-secondary;
-    }
-  
     [data-theme=dark] & {
-      background: $dark-background-secondary;
+      background: var(--page-background);
       color: inherit;
     }
   
     [data-theme=light] & {
-      background: $light-background-secondary;
+      background: var(--page-background);
     }
-  }
-}
-
-// Maximum Width
-.mw {
-  &-100 {
-    max-width: 100%!important;
-  }
-
-  &-80 {
-    max-width: 80%!important;
-  }
-
-  &-40 {
-    max-width: 40%!important;
   }
 }
