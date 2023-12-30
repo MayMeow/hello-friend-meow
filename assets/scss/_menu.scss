@@ -5,7 +5,7 @@
     grid-template-columns: repeat(4,1fr);
     display: grid;
 
-    @media #{var(--phoneWidth)} {
+    @media #{$media-size-phone} {
       grid-template-columns: repeat(2,1fr);
     }
 

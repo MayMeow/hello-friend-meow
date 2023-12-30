@@ -51,6 +51,7 @@ $machiato-surface1: #494d64;
 $machiato-crust: #181926;
 $machiato-green: #a6da95;
 $machiato-pink: #f5bde6;
+$machiato-red: #ed8796;
 $machiato-rosewater: #f4dbd6;
 // <-- KEEP
 
@@ -67,7 +68,7 @@ $machiato-rosewater: #f4dbd6;
 
   // text
   --text: #{$latte-text};
-  --text-variant: #{$machiato-text};
+  --text-variant: #{$latte-text};
   --text-secondary: #{$latte-subtext0};
 
   --post-info-color: #{$latte-text};
@@ -113,6 +114,9 @@ $machiato-rosewater: #f4dbd6;
   --statuslog-info-link-color: #{$machiato-green};
   --statuslog-info-count-color: #{$machiato-green};
   --statuslog-items-links-color: #{$latte-pink};
+
+  //profile
+  --profile-badge-color: #{$machiato-red};
   // <-- new
 }
 
@@ -125,8 +129,8 @@ $machiato-rosewater: #f4dbd6;
 
     // text
     --text: #{$machiato-text};
-    --text-variant: #{$latte-text};
-    --text-secondary: #{$machiato-subtext0};
+    --text-variant: #{$machiato-text};
+    --text-secondary: #{$latte-subtext0};
 
     --post-info-color: #{$machiato-rosewater};
 
