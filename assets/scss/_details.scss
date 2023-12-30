@@ -1,7 +1,7 @@
 details {
     max-width: 100%;
-    background-color: var(--latte-Yellow);
-    color: var(--macchiato-Crust);
+    background-color: var(--details-bg);
+    color: var(--details-text);
     border-radius: var(--radius);
 
     &:not([open]) {

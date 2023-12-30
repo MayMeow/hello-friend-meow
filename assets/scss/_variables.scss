@@ -36,6 +36,7 @@ $latte-pink: #ea76cb;
 $latte-text: #4c4f69;
 $latte-subtext0: #6c6f85;
 $latte-surface0: #ccd0da;
+$latte-yellow: #df8e1d;
 
 // dark theme Machiato
 $machiato-base: #24273a;
@@ -43,13 +44,14 @@ $machiato-mantle: #1e2030;
 $machiato-text: #cad3f5;
 $machiato-subtext0: #a5adcb;
 $machiato-surface0: #363a4f;
+$machiato-crust: #181926;
 // <-- KEEP
 
 /* Variables for js, must be the same as these in @custom-media queries */
 :root {
   // original
-  --phoneWidth: #{$media-size-phone};
-  --tabletWidth: #{$media-size-tablet};
+  --phoneWidth: #{$media-size-phone}; //do @include media-phone instead
+  --tabletWidth: #{$media-size-tablet}; // use @include media-tablet instead
   --header-width: 1200px;
   --radius: .5rem;
 
@@ -66,11 +68,14 @@ $machiato-surface0: #363a4f;
   --border-color: #{$latte-surface0};
   --table-border-color: #{$latte-surface0};
 
-  // same on both themes
+  // same on both themes -->
   --new-button-bg: #{$latte-sky};
   --new-button-bg-hover: #{$latte-pink};
   --new-button-text: #{$latte-base};
   --new-button-text-hover: #{$machiato-base};
+
+  --details-bg: #{$latte-yellow};
+  --details-text: #{$machiato-crust};
   // <-- new
 
   // colors

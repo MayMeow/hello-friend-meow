@@ -34,7 +34,7 @@ body {
   background-color: var(--page-background);
   color: var(--text);
 
-  @media #{var(--phoneWidth)} {
+  @media #{$media-size-phone} {
     //font-size: 1rem;
   }
 
@@ -63,10 +63,6 @@ h6 {
 h1 {
   font-size: 3rem; // up from 2.625
   font-family: 'VC Honey Deck', 'Noto Serif KR', serif;
-
-  /**[data-theme=dark] & {
-    color: $light-background;
-  }**/
 }
 
 h2 {
@@ -82,7 +78,7 @@ h4 {
   font-size: 1.500rem; // up from 1.125
 }
 
-@media #{var(--phoneWidth)} {
+@media #{$media-size-phone} {
   h1 {
     font-size: 2rem;
   }
@@ -237,7 +233,7 @@ pre {
   font-size: 0.95rem;
   overflow: auto;
 
-  @media #{var(--phoneWidth)} {
+  @media #{$media-size-phone} {
     white-space: pre-wrap;
     word-wrap: break-word;
   }
@@ -273,7 +269,7 @@ blockquote {
   margin: 40px;
   padding: 10px 20px;
 
-  @media #{var(--phoneWidth)} {
+  @media #{$media-size-phone} {
     margin: 10px;
     padding: 10px;
   }
@@ -302,7 +298,7 @@ ol {
   margin-left: 40px;
   padding: 0;
 
-  @media #{var(--phoneWidth)} {
+  @media #{$media-size-phone} {
     margin-left: 20px;
   }
 }
@@ -344,7 +340,7 @@ ol ol {
   clip-path: polygon(0 0,100% 20px,100% 100%,0 100%);
   --webkit-clip-path: polygon(0 0,100% 20px,100% 100%,0 100%);
 
-  @media #{var(--phoneWidth)} {
+  @media #{$media-size-phone} {
     margin-top: 0;
   }
 }
@@ -370,13 +366,13 @@ hr {
 }
 
 .hide-on-phone {
-  @media #{var(--phoneWidth)} {
+  @media #{$media-size-phone} {
     display: none;
   }
 }
 
 .hide-on-tablet {
-  @media #{var(--tabletWidth)} {
+  @media #{$media-size-tablet} {
     display: none;
   }
 }
