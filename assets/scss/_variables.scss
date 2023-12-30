@@ -1,29 +1,5 @@
 @charset "UTF-8";
 
-/* Light theme color */
-// $light-background: var(--Base); //--content-background
-// $light-background-secondary: var(--Mantle); // --page-background
-// $light-background-header: var(--Mantle); // --page-background
-// $light-color: var(--Text); // --text
-// $light-color-variant: var(--Text-Variant); //--text-variant
-// $light-color-secondary: var(--Subtext0); //--text-secondary
-// $light-border-color: var(--Surface0);// --border-color
-// $light-table-color: var(--Surface0);// --table-border-color
-// $light-href-color: var(--Accent);
-// $light-menu-hover-color: var(--Pink);
-
-/* Dark theme colors */
-// $dark-background: var(--Mantle); //--content-background
-// $dark-background-secondary: var(--Base); // --page-background
-//$dark-background-header: var(--Base); // --page-background
-// $dark-color: var(--Text); // --text
-// $dark-color-variant: var(--Text-Variant); //--text-variant
-// $dark-color-secondary: var(--Subtext0); //--text-secondary
-// $dark-border-color: var(--Surface0); // --border-color
-// $dark-table-color: var(--Surface0);// --table-border-color
-// $dark-href-color: var(--Accent);
-// $dark-menu-hover-color: var(--Pink);
-
 // KEEP -->
 $media-size-phone: "(max-width: 684px)";
 $media-size-tablet: "(max-width: 900px)";
@@ -90,6 +66,8 @@ $machiato-rosewater: #f4dbd6;
   --post-item-link-hover-text: #{$machiato-base}; // both schemes
   --post-item-day-color: #{$latte-subtext0};
 
+  --post-items-count-color: #{$latte-green};
+
   --list-marker-color: #{$latte-text};
 
   // posts graph
@@ -111,9 +89,9 @@ $machiato-rosewater: #f4dbd6;
   --details-text: #{$machiato-crust};
 
   // statuslog
-  --statuslog-info-link-color: #{$machiato-green};
-  --statuslog-info-count-color: #{$machiato-green};
-  --statuslog-items-links-color: #{$latte-pink};
+  --statuslog-info-link-color: #{$latte-green};
+  --statuslog-info-count-color: #{$latte-green};
+  --statuslog-items-links-color: #{$latte-pink}; // both schemes
 
   //profile
   --profile-badge-color: #{$machiato-red};
@@ -149,6 +127,8 @@ $machiato-rosewater: #f4dbd6;
     --post-item-border-color: #{$machiato-surface1};
     --post-item-day-color: #{$machiato-green};
 
+    --post-items-count-color: #{$machiato-green};
+
     --list-marker-color: #{$machiato-pink};
 
     // posts graph
@@ -157,6 +137,10 @@ $machiato-rosewater: #f4dbd6;
     // href
     --href-color: #{$machiato-green}; // href color and href hover bg
     --href-text-hover-color: #{$machiato-mantle};
+
+    // statuslog
+    --statuslog-info-link-color: #{$machiato-green};
+    --statuslog-info-count-color: #{$machiato-green};
     // <-- new
   }
 }

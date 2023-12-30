@@ -429,22 +429,14 @@ hr {
 }
 
 .fc-green {
-  color: var(--latte-Green);
-
-  @media (prefers-color-scheme: dark) {
-    color: var(--macchiato-Green);
-  }
-
-  @media (prefers-color-scheme: light) {
-    color: var(--latte-Green);
-  }
+  color: var(--post-items-count-color);
 
   [data-theme=dark] & {
-    color: var(--macchiato-Green);
+    color: var(--post-items-count-color);
   }
   
   [data-theme=light] & {
-    color: var(--latte-Green);
+    color: var(--post-items-count-color);
   }
 }
 
