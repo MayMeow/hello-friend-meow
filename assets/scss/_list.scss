@@ -1,13 +1,13 @@
 .posts {
   width: 100%;
-  max-width: 800px;
+  max-width: var(--content-width);
   text-align: left;
   padding: 20px;
   margin: 20px auto;
 
-  @media #{$media-size-tablet} {
+  /*@media #{$media-size-tablet} {
     max-width: 660px;
-  }
+  }*/
 
   &:not(:last-of-type) {
     // Default

@@ -38,6 +38,8 @@ $latte-subtext0: #6c6f85;
 $latte-surface0: #ccd0da;
 $latte-surface1: #bcc0cc;
 $latte-yellow: #df8e1d;
+$latte-green: #40a02b;
+$latte-mauve: #8839ef;
 
 // dark theme Machiato
 $machiato-base: #24273a;
@@ -48,6 +50,8 @@ $machiato-surface0: #363a4f;
 $machiato-surface1: #494d64;
 $machiato-crust: #181926;
 $machiato-green: #a6da95;
+$machiato-pink: #f5bde6;
+$machiato-rosewater: #f4dbd6;
 // <-- KEEP
 
 /* Variables for js, must be the same as these in @custom-media queries */
@@ -58,6 +62,7 @@ $machiato-green: #a6da95;
 
   --header-width: 1200px;
   --content-width: 800px;
+  --cover-width: 860px;
   --radius: .5rem;
 
   // new -->
@@ -69,6 +74,15 @@ $machiato-green: #a6da95;
   --text-variant: #{$machiato-text};
   --text-secondary: #{$latte-subtext0};
 
+  --post-info-color: #{$latte-text};
+
+  // headings
+  --h1-color: #{$latte-text};
+  --h2-color: #{$latte-text};
+  --h3-color: #{$latte-text};
+  --h4-color: #{$latte-text};
+  --h-color: #{$latte-text};
+
   // borders
   --border-color: #{$latte-surface0};
   --table-border-color: #{$latte-surface0};
@@ -79,9 +93,15 @@ $machiato-green: #a6da95;
   --post-item-link-hover-text: #{$machiato-base}; // both schemes
   --post-item-day-color: #{$latte-subtext0};
 
+  --list-marker-color: #{$latte-text};
+
   // posts graph
   --posts-graph-text-color: #{$latte-text};
   --posts-graph-box-has-post-color: #{$latte-pink}; // both schemes
+
+  // href
+  --href-color: #{$latte-mauve}; // href color and href hover bg
+  --href-text-hover-color: #{$latte-base};
 
   // same on both themes -->
   --new-button-bg: #{$latte-sky};
@@ -143,6 +163,15 @@ $machiato-green: #a6da95;
     --text-variant: #{$latte-text};
     --text-secondary: #{$machiato-subtext0};
 
+    --post-info-color: #{$machiato-rosewater};
+
+    // headings
+    --h1-color: #{$latte-pink};
+    --h2-color: #{$latte-sky};
+    --h3-color: #{$latte-green};
+    --h4-color: #{$latte-yellow};
+    --h-color: #{$machiato-text};
+
     // borders
     --border-color: #{$machiato-surface0};
     --table-border-color: #{$machiato-surface0};
@@ -151,8 +180,14 @@ $machiato-green: #a6da95;
     --post-item-border-color: #{$machiato-surface1};
     --post-item-day-color: #{$machiato-green};
 
+    --list-marker-color: #{$machiato-pink};
+
     // posts graph
     --posts-graph-text-color: #{$machiato-text};
+
+    // href
+    --href-color: #{$machiato-green}; // href color and href hover bg
+    --href-text-hover-color: #{$machiato-mantle};
     // <-- new
 
   // colors
@@ -188,8 +223,7 @@ $machiato-green: #a6da95;
   }
 }
 
-/* Content */
-$max-width: 860px;
+
 
 /* Colors */
 
