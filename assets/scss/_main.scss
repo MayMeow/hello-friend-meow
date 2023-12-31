@@ -31,31 +31,21 @@ body {
   // background-image: linear-gradient(to right, rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234));
 
   // Default
-  background-color: $light-background-header;
-  color: $light-color;
+  background-color: var(--page-background);
+  color: var(--text);
 
   @media #{$media-size-phone} {
     //font-size: 1rem;
   }
 
-  @media (prefers-color-scheme: dark) {
-    background-color: $dark-background-header;
-    color: $dark-color;
-  }
-
-  @media (prefers-color-scheme: light) {
-    background-color: $light-background-header;
-    color: $light-color;
-  }
-
   [data-theme=dark] & {
-    background-color: $dark-background-header;
-    color: $dark-color;
+    background-color: var(--page-background);
+    color: var(--text);
   }
 
   [data-theme=light] & {
-    background-color: $light-background-header;
-    color: $light-color;
+    background-color: var(--page-background);
+    color: var(--text);
   }
 }
 
@@ -73,10 +63,6 @@ h6 {
 h1 {
   font-size: 3rem; // up from 2.625
   font-family: 'VC Honey Deck', 'Noto Serif KR', serif;
-
-  /**[data-theme=dark] & {
-    color: $light-background;
-  }**/
 }
 
 h2 {
@@ -200,22 +186,14 @@ figure {
 
 em, i, strong {
   // Default
-  color: $dark-color-variant;
-
-  @media (prefers-color-scheme: dark) {
-    color: $light-color-variant;
-  }
-
-  @media (prefers-color-scheme: light) {
-    color: $dark-color-variant;
-  }
+  color: var(--text-variant);
 
   [data-theme=dark] & {
-    color: $light-color-variant;
+    color: var(--text-variant);
   }
 
   [data-theme=light] & {
-    color: $dark-color-variant;
+    color: var(--text-variant);
   }
 }
 
@@ -228,22 +206,15 @@ code {
   border-radius: 5px;
   font-size: 0.95rem;
   // Default
-  background: $light-background-secondary;
+  background: var(--page-background);
 
-  @media (prefers-color-scheme: dark) {
-    background: $dark-background-secondary;
-  }
-
-  @media (prefers-color-scheme: light) {
-    background: $light-background-secondary;
-  }
 
   [data-theme=dark] & {
-    background: $dark-background-secondary;
+    background: var(--page-background);
   }
 
   [data-theme=light] & {
-    background: $light-background-secondary;
+    background: var(--page-background);
   }
 }
 
@@ -351,22 +322,15 @@ ol ol {
   align-items: center;
   justify-content: center;
   margin: 0;
-  background-color: var(--macchiato-Mantle);
+  background-color: var(--content-background);
 
-  @media (prefers-color-scheme: dark) {
-    background-color: $dark-background;
-  }
-
-  @media (prefers-color-scheme: light) {
-    background-color: $light-background;
-  }
 
   [data-theme=dark] & {
-    background-color: $dark-background;
+    background-color: var(--content-background);
   }
 
   [data-theme=light] & {
-    background-color: $light-background;
+    background-color: var(--content-background);
   }
 
   //clip-path: polygon(0 20px,100% 0,100% calc(100% - 20px),0 100%);
@@ -386,22 +350,14 @@ hr {
   border: none;
   height: 1px;
   // Default
-  background: $light-border-color;
-
-  @media (prefers-color-scheme: dark) {
-    background: $dark-border-color;
-  }
-
-  @media (prefers-color-scheme: light) {
-    background: $light-border-color;
-  }
+  background: var(--border-color);
 
   [data-theme=dark] & {
-    background: $dark-border-color;
+    background: var(--border-color);
   }
 
   [data-theme=light] & {
-    background: $light-border-color;
+    background: var(--border-color);
   }
 }
 
@@ -473,22 +429,14 @@ hr {
 }
 
 .fc-green {
-  color: var(--latte-Green);
-
-  @media (prefers-color-scheme: dark) {
-    color: var(--macchiato-Green);
-  }
-
-  @media (prefers-color-scheme: light) {
-    color: var(--latte-Green);
-  }
+  color: var(--post-items-count-color);
 
   [data-theme=dark] & {
-    color: var(--macchiato-Green);
+    color: var(--post-items-count-color);
   }
   
   [data-theme=light] & {
-    color: var(--latte-Green);
+    color: var(--post-items-count-color);
   }
 }
 
@@ -515,8 +463,8 @@ hr {
       margin-bottom: 10px;
 
       a, a:visited, a:active {
-        color: var(--macchiato-Red);
-        --webkit-color: var(--macchiato-Red);
+        color: var(--profile-badge-color);
+        --webkit-color: var(--profile-badge-color);
       }
     }
   }

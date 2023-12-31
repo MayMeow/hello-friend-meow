@@ -18,11 +18,15 @@
 {{ $wordCount := $scratch.Get "wordcount" }}
 {{ $avgPostLength := div $wordCount $postCount }}
 
+{{ $readingTime := mul (div $wordCount 200) 60 }}
+{{ $readingTimeMinutes := math.Floor (div $readingTime 60) }}
+
+
 Posts: {{ $titlePostsCount | lang.NumFmt 0 }}
 <br>
 Statuses: {{ len $statuses | lang.NumFmt 0 }}
 <br>
-Words: {{ $wordCount | lang.NumFmt 0 }}
+Words: {{ $wordCount | lang.NumFmt 0 }}. You will need {{ $readingTimeMinutes | lang.NumFmt 0 }} minutes to read all posts.
 <br>
 Words per post: {{ $avgPostLength | lang.NumFmt 0 }}
 <br><br>

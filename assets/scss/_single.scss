@@ -1,30 +1,70 @@
 .post {
   width: 100%;
-  max-width: 800px;
+  max-width: var(--content-width);
   text-align: left;
   padding: 20px;
   margin: 20px auto;
   /*@media #{$media-size-tablet} {
     max-width: 600px;
   }*/
-  
-  h2,h3,h4,h5,h6 {
-    color: var(--latte-Pink);
 
-    @media (prefers-color-scheme: dark) {
-      color: var(--latte-Pink);
-    }
+  h1 {
+    color: var(--h1-color);
 
     [data-theme=dark] & {
-      color: var(--latte-Pink);
-    }
-
-    @media (prefers-color-scheme: light) {
-      color: var(--latte-Sky);
+      color: var(--h1-color);
     }
 
     [data-theme=light] & {
-      color: var(--latte-Sky);
+      color: var(--h1-color);
+    }
+  }
+
+  h2 {
+    color: var(--h2-color);
+
+    [data-theme=dark] & {
+      color: var(--h2-color);
+    }
+
+    [data-theme=light] & {
+      color: var(--h2-color);
+    }
+  }
+
+  h3 {
+    color: var(--h3-color);
+
+    [data-theme=dark] & {
+      color: var(--h3-color);
+    }
+
+    [data-theme=light] & {
+      color: var(--h3-color);
+    }
+  }
+
+  h4 {
+    color: var(--h4-color);
+
+    [data-theme=dark] & {
+      color: var(--h4-color);
+    }
+
+    [data-theme=light] & {
+      color: var(--h4-color);
+    }
+  }
+
+  h5,h6 {
+    color: var(--h-color);
+
+    [data-theme=dark] & {
+      color: var(--h-color);
+    }
+
+    [data-theme=light] & {
+      color: var(--h-color);
     }
   }
 
@@ -53,46 +93,6 @@
     }
   }
 
-  &-title-colorized {
-    color: $purple-3;
-
-    @media (prefers-color-scheme: dark) {
-      color: $purple-3;
-    }
-
-    @media (prefers-color-scheme: light) {
-      color: $purple-5;
-    }
-
-    [data-theme=dark] & {
-      color: $purple-3;
-    }
-    
-    [data-theme=light] & {
-      color: $purple-5;
-    }
-  }
-
-  &-title-default {
-    color: $blue-3;
-
-    @media (prefers-color-scheme: dark) {
-      color: $blue-3;
-    }
-
-    @media (prefers-color-scheme: light) {
-      color: $blue-4;
-    }
-    
-    [data-theme=dark] & {
-      color: $blue-3;
-    }
-    
-    [data-theme=light] & {
-      color: $blue-4;
-    }
-  }
-
   &-tags {
     display: block;
     margin-bottom: 20px;
@@ -109,66 +109,40 @@
     font-family: 'Lato', 'Noto Sans KR', sans-serif;
 
     ul li::marker {
-      color: var(--macchiato-Pink);
-
-      @media (prefers-color-scheme: dark) {
-        color: var(--macchiato-Pink);
-      }
-  
-      @media (prefers-color-scheme: light) {
-        color: var(--latte-Pink);
-      }
+      color: var(--list-marker-color);
   
       [data-theme=dark] & {
-        color: var(--macchiato-Pink);
+        color: var(--list-marker-color);
       }
       
       [data-theme=light] & {
-        color: var(--latte-Pink);
+        color: var(--list-marker-color);
       }
     }
 
     a {
-      color: $dark-href-color;
-
-      @media (prefers-color-scheme: dark) {
-        color: $dark-href-color;
-      }
-  
-      @media (prefers-color-scheme: light) {
-        color: $light-href-color;;
-      }
+      color: var(--href-color);
   
       [data-theme=dark] & {
-        color: $dark-href-color
+        color: var(--href-color);
       }
       
       [data-theme=light] & {
-        color: $light-href-color;;
+        color: var(--href-color);
       }
       
       &:hover {
-        background-color: $dark-href-color;
-        color: $dark-background;
-  
-        @media (prefers-color-scheme: dark) {
-          background-color: $dark-href-color;
-          color: $dark-background;
-        }
-    
-        @media (prefers-color-scheme: light) {
-          background-color: $light-href-color;
-          color: $light-background;
-        }
+        background-color: var(--href-color);
+        color: var(--href-text-hover-color);
     
         [data-theme=dark] & {
-          background-color: $dark-href-color;
-          color: $dark-background;
+          background-color: var(--href-color);
+          color: var(--href-text-hover-color);
         }
         
         [data-theme=light] & {
-          background-color: $light-href-color;
-          color: $light-background;
+          background-color: var(--href-color);
+          color: var(--href-text-hover-color);
         }
       }
     }  
@@ -187,8 +161,8 @@
   &-cover {
     border-radius: 8px;
     margin: 40px -50px;
-    width: $max-width;
-    max-width: $max-width;
+    width: var(--cover-width);
+    max-width: var(--cover-width);
     overflow: hidden;
     @media #{$media-size-tablet} {
       margin: 20px 0;
@@ -205,24 +179,18 @@
     margin-top: 30px;
     font-size: 0.8rem;
     line-height: normal;
-    color: var(--macchiato-Rosewater);
-    /*@include dimmed;*/
-
-    @media (prefers-color-scheme: dark) {
-      color: var(--macchiato-Rosewater);
-    }
+    color: var(--post-info-color);
 
     @media (prefers-color-scheme: light) {
-      color: $light-color;
       @include dimmed;
     }
 
     [data-theme=dark] & {
-      color: var(--macchiato-Rosewater);
+      color: var(--post-info-color);
     }
     
     [data-theme=light] & {
-      color: $light-color;
+      color: var(--post-info-color);
       @include dimmed;
     }
 
@@ -307,13 +275,13 @@
       font-weight: 600;
       text-align: center;
 
-      background-color: var(--latte-Sky);
-      color: var(--latte-Base);
+      background-color: var(--new-button-bg);
+      color: var(--new-button-text);
       border-radius: 8px;
 
       &:hover {
-        color: var(--macchiato-Base);
-        background-color: var(--latte-Pink);
+        color: var(--new-button-text-hover);
+        background-color: var(--new-button-bg-hover);
       }
     }
   }
@@ -368,27 +336,17 @@
       letter-spacing: 0.1em;
       z-index: 1;
       // Default
-      background: $light-background;
-      color: $light-color-secondary;
-
-      @media (prefers-color-scheme: dark) {
-        background: $dark-background;
-        color: $dark-color-secondary;
-      }
-    
-      @media (prefers-color-scheme: light) {
-        background: $light-background;
-        color: $light-color-secondary;
-      }
+      background: var(--content-background);
+      color: var(--text-secondary);
     
       [data-theme=dark] & {
-        background: $dark-background;
-        color: $dark-color-secondary;
+        background: var(--content-background);
+        color: var(--text-secondary);
       }
     
       [data-theme=light] & {
-        background: $light-background;
-        color: $light-color-secondary;
+        background: var(--content-background);
+        color: var(--text-secondary);
       }
     }
 
@@ -427,22 +385,14 @@
   cursor: pointer;
   appearance: none;
   // Default
-  background: $light-background-secondary;
-
-  @media (prefers-color-scheme: dark) {
-    background: $dark-background-secondary;
-  }
-
-  @media (prefers-color-scheme: light) {
-    background: $light-background-secondary;
-  }
+  background: var(--page-background);
 
   [data-theme=dark] & {
-    background: $dark-background-secondary;
+    background: var(--page-background);
   }
 
   [data-theme=light] & {
-    background: $light-background-secondary;
+    background: var(--page-background);
   }
 
   + .button {

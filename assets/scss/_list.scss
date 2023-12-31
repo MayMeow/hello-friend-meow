@@ -1,32 +1,24 @@
 .posts {
   width: 100%;
-  max-width: 800px;
+  max-width: var(--content-width);
   text-align: left;
   padding: 20px;
   margin: 20px auto;
 
-  @media #{$media-size-tablet} {
+  /*@media #{$media-size-tablet} {
     max-width: 660px;
-  }
+  }*/
 
   &:not(:last-of-type) {
     // Default
-    border-bottom: 1px solid $light-border-color;
-
-    @media (prefers-color-scheme: dark) {
-      border-bottom: 1px solid $dark-border-color;
-    }
-  
-    @media (prefers-color-scheme: light) {
-      border-bottom: 1px solid $light-border-color;
-    }
+    border-bottom: 1px solid var(--border-color);
   
     [data-theme=dark] & {
-      border-bottom: 1px solid $dark-border-color;
+      border-bottom: 1px solid var(--border-color);
     }
   
     [data-theme=light] & {
-      border-bottom: 1px solid $light-border-color;
+      border-bottom: 1px solid var(--border-color);
     }
   }
 
@@ -63,27 +55,19 @@
     }
 
     &-item {
-      border-bottom: 1px var(--macchiato-Surface1) solid;
+      border-bottom: 1px var(--post-item-border-color) solid;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-direction: row;
       padding: 1.063rem 0;
 
-      @media (prefers-color-scheme: dark) {
-        border-bottom: 1px var(--macchiato-Surface1) solid;
-      }
-
       [data-theme=dark] & {
-        border-bottom: 1px var(--macchiato-Surface1) solid;
-      }
-
-      @media (prefers-color-scheme: light) {
-        border-bottom: 1px var(--latte-Surface1) solid;
+        border-bottom: 1px var(--post-item-border-color) solid;
       }
 
       [data-theme=light] & {
-        border-bottom: 1px var(--latte-Surface1) solid;
+        border-bottom: 1px var(--post-item-border-color) solid;
       }
 
       a {
@@ -91,28 +75,16 @@
         font-weight: 900;
 
         &:hover {
-          background-color: $dark-menu-hover-color;
-          color: $dark-background;
+          background-color: var(--post-item-link-hover-color);
+          color: var(--post-item-link-hover-text);
           text-decoration: none;
-
-          @media (prefers-color-scheme: dark) {
-            background-color: $dark-menu-hover-color;
-            color: $dark-background;
-          }
-      
-          @media (prefers-color-scheme: light) {
-            background-color: $light-menu-hover-color;
-            color: $light-background;
-          }
       
           [data-theme=dark] & {
-            background-color: $dark-menu-hover-color;
-            color: $dark-background;
+            background-color: var(--post-item-link-hover-color);
           }
           
           [data-theme=light] & {
-            background-color: $light-menu-hover-color;
-            color: $light-background;
+            background-color: var(--post-item-link-hover-color);
           }
 
         }
@@ -123,23 +95,15 @@
     &-day {
       flex-shrink: 0;
       margin-left: 1em;
-      color: var(--macchiato-Green);
+      color: var(--post-item-day-color);
       font-weight: normal;
 
-      @media (prefers-color-scheme: dark) {
-        color: var(--macchiato-Green);
-      }
-
       [data-theme=dark] & {
-        color: var(--macchiato-Green);
-      }
-
-      @media (prefers-color-scheme: light) {
-        color: var(--latte-Subtext0);
+        color: var(--post-item-day-color);
       }
 
       [data-theme=light] & {
-        color: var(--latte-Subtext0);
+        color: var(--post-item-day-color);
       }
     }
   }
@@ -161,13 +125,13 @@
       font-weight: 600;
       text-align: center;
 
-      background-color: var(--latte-Sky);
-      color: var(--latte-Base);
+      background-color: var(--new-button-bg);
+      color: var(--new-button-text);
       border-radius: 8px;
 
       &:hover {
-        color: var(--macchiato-Base);
-        background-color: var(--latte-Pink);
+        color: var(--new-button-text-hover);
+        background-color: var(--new-button-bg-hover);
       }
     }
   }
@@ -189,12 +153,12 @@
       }
 
       a {
-        color: var(--macchiato-Green);
+        color: var(--statuslog-info-link-color);
       }
     }
 
     &-count {
-      color: var(--macchiato-Green);
+      color: var(--statuslog-info-count-color);
       font-weight: 600;
     }
 
@@ -204,7 +168,7 @@
       justify-content: start;
       gap: 8px;
       a {
-        color: var(--latte-Pink);
+        color: var(--statuslog-items-links-color);
       }
     }
   }
