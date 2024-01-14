@@ -29,6 +29,10 @@ $machiato-green: #a6da95;
 $machiato-pink: #f5bde6;
 $machiato-red: #ed8796;
 $machiato-rosewater: #f4dbd6;
+
+$button-bg: mix($latte-pink, $latte-sky, 2%);
+$dark-base: mix($latte-pink, #1e1e2e, 1%);
+$dark-mantle: mix($latte-pink, #181825, 1%);
 // <-- KEEP
 
 /* Variables for js, must be the same as these in @custom-media queries */
@@ -79,7 +83,7 @@ $machiato-rosewater: #f4dbd6;
   --href-text-hover-color: #{$latte-base};
 
   // same on both themes -->
-  --new-button-bg: #{$latte-sky};
+  --new-button-bg: #{$button-bg};
   --new-button-bg-hover: #{$latte-pink};
   --new-button-text: #{$latte-base};
   --new-button-text-hover: #{$machiato-base};
@@ -102,8 +106,8 @@ $machiato-rosewater: #f4dbd6;
   :root {
 
     // new -->
-    --page-background: #{$machiato-base}; // page & header
-    --content-background: #{$machiato-mantle}; // content
+    --page-background: #{$dark-base}; // page & header
+    --content-background: #{$dark-mantle}; // content
 
     // text
     --text: #{$machiato-text};

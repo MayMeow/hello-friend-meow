@@ -442,6 +442,8 @@ hr {
 
 .profile {
   margin: 30px 0;
+  width: 100%;
+  max-width: var(--content-width);
 
   &-title {
     display: flex;
