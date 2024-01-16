@@ -87,13 +87,14 @@
     url("../fonts/AlfaSlabOne-Regular.woff") format("woff");
 }
 
+//Serif
 @import url('https://cdn.maymeow.com/typography/font-honey.css');
-@import url('https://cdn.maymeow.com/typography/font-lato-regular.css');
-@import url('https://cdn.maymeow.com/typography/font-lato-bold.css');
-@import url('https://cdn.maymeow.com/typography/font-lato-italic.css');
 @import url('https://cdn.maymeow.com/typography/font-md-io.css');
-// @import url('https://cdn.maymeow.com/typography/fontawesome-free/css/all.css');
 
+@import url('https://cdn.maymeow.com/fonts/font-1705427251315.css'); //lato sans
 
-@import url('https://cdn.maymeow.com/typography/noto-serif-kr/noto-serif-kr.css');
-@import url('https://cdn.maymeow.com/typography/noto-sans-kr/noto-sans-kr.css');
+// asian fonts
+@import url('https://cdn.maymeow.com/fonts/font-1705425842420.css'); // noto sans JP
+@import url('https://cdn.maymeow.com/fonts/font-1705425940865.css'); // noto sans KR
+@import url('https://cdn.maymeow.com/fonts/font-1705426511451.css'); // noto serif KR
+@import url('https://cdn.maymeow.com/fonts/font-1705426602024.css'); // noto sans JP

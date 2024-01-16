@@ -3,7 +3,7 @@
 
     a, &-info a {
         text-decoration: underline;
-        font-weight: 600;
+        font-weight: 800;
         color: var(--href-color);
         text-decoration-color: var(--accent);
 
@@ -29,7 +29,7 @@
 
     &-count {
         color: var(--statuslog-info-count-color);
-        font-weight: 600;
+        font-weight: 800;
     }
 
     &-links {
