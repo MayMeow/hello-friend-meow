@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+$accent: #04a5e5;
+$accent-hover: #ea76cb;
+
 // KEEP -->
 $media-size-phone: "(max-width: 684px)";
 $media-size-tablet: "(max-width: 900px)";
@@ -7,8 +10,8 @@ $media-size-tablet: "(max-width: 900px)";
 //light theme Latte
 $latte-base: #eff1f5;
 $latte-mantle: #e6e9ef;
-$latte-sky: #04a5e5;
-$latte-pink: #ea76cb;
+// $latte-sky: #04a5e5; ---> accent
+// $latte-pink: #ea76cb; --> accent hover
 $latte-text: #4c4f69;
 $latte-subtext0: #6c6f85;
 $latte-surface0: #ccd0da;
@@ -30,9 +33,23 @@ $machiato-pink: #f5bde6;
 $machiato-red: #ed8796;
 $machiato-rosewater: #f4dbd6;
 
-$button-bg: mix($latte-pink, $latte-sky, 2%);
-$dark-base: mix($latte-pink, #1e1e2e, 1%);
-$dark-mantle: mix($latte-pink, #181825, 1%);
+// calculated
+$button-bg: mix($accent-hover, $accent, 2%);
+$dark-base: mix($accent, #1e1e2e, 1%);
+$dark-mantle: mix($accent, #181825, 1%);
+$light-base: mix($accent, #eff1f5, 1%);
+$light-mantle: mix($accent, #e6e9ef, 1%);
+
+$light-text: mix($accent,$latte-text, 15%);
+$light-subtext: mix($accent,$latte-subtext0, 15%);
+$dark-text: mix($accent,$machiato-text, 15%);
+$dark-subtext: mix($accent,$latte-subtext0, 15%);
+
+$code-dark: mix($accent-hover, #1e1e2e, 15%);
+$code-dark-text: mix($accent-hover,$machiato-text, 75%);
+$code-light: mix($accent-hover, #e6e9ef, 10%);
+$code-light-text: mix($accent-hover, $latte-text, 60%);
+
 // <-- KEEP
 
 /* Variables for js, must be the same as these in @custom-media queries */
@@ -43,19 +60,24 @@ $dark-mantle: mix($latte-pink, #181825, 1%);
   --radius: .5rem;
 
   // new -->
-  --page-background: #{$latte-mantle};
-  --content-background: #{$latte-base};
+  --page-background: #{$light-mantle};
+  --content-background: #{$light-base};
+  --code-background: #{$code-light};
+  --code-text: #{$code-light-text};
+
+  --accent : #{$accent};
+  --accent-hover : #{$accent-hover};
 
   // text
-  --text: #{$latte-text};
-  --text-variant: #{$latte-text};
-  --text-secondary: #{$latte-subtext0};
+  --text: #{$light-text};
+  --text-variant: #{$light-text};
+  --text-secondary: #{$light-subtext};
 
   --post-info-color: #{$latte-text};
 
   // headings
-  --h1-color: #{$latte-text};
-  --h2-color: #{$latte-text};
+  --h1-color: #{$accent};
+  --h2-color: #{$accent-hover};
   --h3-color: #{$latte-text};
   --h4-color: #{$latte-text};
   --h-color: #{$latte-text};
@@ -66,7 +88,7 @@ $dark-mantle: mix($latte-pink, #181825, 1%);
 
   // lists
   --post-item-border-color: #{$latte-surface1};
-  --post-item-link-hover-color: #{$latte-pink}; // both schemes
+  --post-item-link-hover-color: #{$accent-hover}; // both schemes
   --post-item-link-hover-text: #{$machiato-base}; // both schemes
   --post-item-day-color: #{$latte-subtext0};
 
@@ -76,15 +98,15 @@ $dark-mantle: mix($latte-pink, #181825, 1%);
 
   // posts graph
   --posts-graph-text-color: #{$latte-text};
-  --posts-graph-box-has-post-color: #{$latte-pink}; // both schemes
+  --posts-graph-box-has-post-color: #{$accent}; // both schemes
 
   // href
-  --href-color: #{$latte-mauve}; // href color and href hover bg
-  --href-text-hover-color: #{$latte-base};
+  --href-color: #{$machiato-base}; // href color and href hover 
+  --href-color-hover: #{$accent};
 
   // same on both themes -->
   --new-button-bg: #{$button-bg};
-  --new-button-bg-hover: #{$latte-pink};
+  --new-button-bg-hover: #{$accent-hover};
   --new-button-text: #{$latte-base};
   --new-button-text-hover: #{$machiato-base};
 
@@ -95,7 +117,7 @@ $dark-mantle: mix($latte-pink, #181825, 1%);
   // statuslog
   --statuslog-info-link-color: #{$latte-green};
   --statuslog-info-count-color: #{$latte-green};
-  --statuslog-items-links-color: #{$latte-pink}; // both schemes
+  --statuslog-items-links-color: #{$accent-hover}; // both schemes
 
   //profile
   --profile-badge-color: #{$machiato-red};
@@ -108,19 +130,21 @@ $dark-mantle: mix($latte-pink, #181825, 1%);
     // new -->
     --page-background: #{$dark-base}; // page & header
     --content-background: #{$dark-mantle}; // content
+    --code-background: #{$code-dark};
+    --code-text: #{$code-dark-text};
 
     // text
-    --text: #{$machiato-text};
-    --text-variant: #{$machiato-text};
-    --text-secondary: #{$latte-subtext0};
+    --text: #{$dark-text};
+    --text-variant: #{$dark-text};
+    --text-secondary: #{$dark-subtext};
 
     --post-info-color: #{$machiato-rosewater};
 
+    --new-button-text: #{$machiato-base};
+
     // headings
-    --h1-color: #{$latte-pink};
-    --h2-color: #{$latte-sky};
-    --h3-color: #{$latte-green};
-    --h4-color: #{$latte-yellow};
+    --h3-color: #{$machiato-text};
+    --h4-color: #{$machiato-text};
     --h-color: #{$machiato-text};
 
     // borders
@@ -139,8 +163,7 @@ $dark-mantle: mix($latte-pink, #181825, 1%);
     --posts-graph-text-color: #{$machiato-text};
 
     // href
-    --href-color: #{$machiato-green}; // href color and href hover bg
-    --href-text-hover-color: #{$machiato-mantle};
+    --href-color: #eff1f5; // href color and href hover bg
 
     // statuslog
     --statuslog-info-link-color: #{$machiato-green};

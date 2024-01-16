@@ -5,18 +5,19 @@
 @import "variables";
 @import "mixins";
 @import "fonts";
+@import "main"; // ? What is .fc-green ????
 @import "buttons";
 /* Modules */
 @import "header";
 @import "logo";
 @import "menu";
-@import "main"; // ? What is .fc-green ????
 @import "list"; // * PUT status log to own file
 @import "single";
 @import "footer"; // ? Footer widht??
 @import "sharing-buttons";
 @import "tables";
 @import "404";
+@import "statuslog";
 /* Highlight */
 
 //!! TODO Remove @import "blockquotes"; 
@@ -25,8 +26,7 @@
 //!! TODO remove @import "micro-blog";
 
 @import "prism";
-
 @import "details";
-
 @import "post-graph";
+
 //!! remove unused@import "project-card";

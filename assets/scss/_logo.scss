@@ -16,6 +16,11 @@
 
   &__text {
     font-size: 1.125rem;
+    color: var(--href-color);
+
+    &:hover {
+      text-shadow: 1px 1px 0px var(--accent), -1px -1px 0px var(--accent-hover);
+    }
   }
 
   &__cursor {

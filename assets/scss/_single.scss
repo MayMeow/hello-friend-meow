@@ -122,30 +122,14 @@
 
     a {
       color: var(--href-color);
-  
-      [data-theme=dark] & {
-        color: var(--href-color);
-      }
-      
-      [data-theme=light] & {
-        color: var(--href-color);
-      }
-      
-      &:hover {
-        background-color: var(--href-color);
-        color: var(--href-text-hover-color);
+      text-decoration: underline;
+      text-decoration-color: var(--accent);
+      font-weight: 600;
     
-        [data-theme=dark] & {
-          background-color: var(--href-color);
-          color: var(--href-text-hover-color);
-        }
-        
-        [data-theme=light] & {
-          background-color: var(--href-color);
-          color: var(--href-text-hover-color);
-        }
+      &:hover {
+        color: var(--href-color-hover);
       }
-    }  
+    }
 
     p {
       img {

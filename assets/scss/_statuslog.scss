@@ -1,0 +1,42 @@
+.statuslog {
+    margin: 0 0 40px 0;
+
+    a, &-info a {
+        text-decoration: underline;
+        font-weight: 600;
+        color: var(--href-color);
+        text-decoration-color: var(--accent);
+
+        &:hover {
+        color: var(--href-color-hover);
+        }
+    }
+
+    p {
+        padding: 0;
+        margin: 0;
+        display: inline;
+    }
+
+    &-info {
+        margin-bottom: 40px;
+        p {
+        margin: 0;
+        padding: 0;
+        display: inline;
+        }
+    }
+
+    &-count {
+        color: var(--statuslog-info-count-color);
+        font-weight: 600;
+    }
+
+    &-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        gap: 8px;
+        font-size: 1rem;
+    }
+}

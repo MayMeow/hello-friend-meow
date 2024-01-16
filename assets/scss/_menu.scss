@@ -2,29 +2,29 @@
 .new-menu {
   margin-top: 20px;
   grid-gap: 8px;
-    grid-template-columns: repeat(4,1fr);
-    display: grid;
+  grid-template-columns: repeat(4,1fr);
+  display: grid;
 
-    @media #{$media-size-phone} {
-      grid-template-columns: repeat(2,1fr);
+  @media #{$media-size-phone} {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  a {
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: .8em;
+    font-weight: 600;
+    text-align: center;
+    text-transform: lowercase;
+
+    background-color: var(--new-button-bg);
+    color: var(--new-button-text);
+    border-radius: 8px;
+
+    &:hover {
+      color: var(--new-button-text-hover);
+      background-color: var(--new-button-bg-hover);
     }
-
-    a {
-      padding: 5px 10px;
-      text-decoration: none;
-      font-weight: 400;
-      font-size: .8em;
-      font-weight: 600;
-      text-align: center;
-      text-transform: lowercase;
-
-      background-color: var(--new-button-bg);
-      color: var(--new-button-text);
-      border-radius: 8px;
-
-      &:hover {
-        color: var(--new-button-text-hover);
-        background-color: var(--new-button-bg-hover);
-      }
-    }
+  }
 }
