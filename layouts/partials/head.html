@@ -22,9 +22,13 @@
 <!-- CSS -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
     type="text/css">
+    
+{{ $options := (dict "targetPath" (printf "%s.css" .color ) "outputStyle" "compressed" "enableSourceMap" true "precision" 6 ) }}
+{{ $colorScheme := resources.Get (printf "scss/colors/%s.scss" .color ) }}
+{{ $style := resources.Get "scss/main.scss" }}
+{{ $concatenated := slice $colorScheme $style | resources.Concat (printf "scss/style-%s.scss" .color ) }}
+{{ $style = $concatenated | resources.ToCSS $options | resources.Fingerprint }}
 
-{{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-{{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
 {{ range $val := $.Site.Params.customCSS }}

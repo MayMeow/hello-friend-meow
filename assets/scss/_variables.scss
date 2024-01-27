@@ -1,8 +1,5 @@
 @charset "UTF-8";
 
-$accent: #04a5e5;
-$accent-hover: #ea76cb;
-
 // KEEP -->
 $media-size-phone: "(max-width: 684px)";
 $media-size-tablet: "(max-width: 900px)";
@@ -102,7 +99,7 @@ $code-light-text: mix($accent-hover, $latte-text, 60%);
 
   // href
   --href-color: #{$machiato-base}; // href color and href hover 
-  --href-color-hover: #{$accent};
+  --href-color-hover: #{$accent-hover};
 
   // same on both themes -->
   --new-button-bg: #{$button-bg};
@@ -115,8 +112,8 @@ $code-light-text: mix($accent-hover, $latte-text, 60%);
   --details-text: #{$machiato-crust};
 
   // statuslog
-  --statuslog-info-link-color: #{$latte-green};
-  --statuslog-info-count-color: #{$latte-green};
+  --statuslog-info-link-color: #{$accent-hover};
+  --statuslog-info-count-color: #{$accent-hover};
   --statuslog-items-links-color: #{$accent-hover}; // both schemes
 
   //profile
@@ -153,7 +150,7 @@ $code-light-text: mix($accent-hover, $latte-text, 60%);
 
     //lists
     --post-item-border-color: #{$machiato-surface1};
-    --post-item-day-color: #{$machiato-green};
+    --post-item-day-color: #{$accent-hover};
 
     --post-items-count-color: #{$machiato-green};
 
@@ -166,8 +163,8 @@ $code-light-text: mix($accent-hover, $latte-text, 60%);
     --href-color: #eff1f5; // href color and href hover bg
 
     // statuslog
-    --statuslog-info-link-color: #{$machiato-green};
-    --statuslog-info-count-color: #{$machiato-green};
+    --statuslog-info-link-color: #{$accent-hover};
+    --statuslog-info-count-color: #{$accent-hover};
     // <-- new
   }
 }
