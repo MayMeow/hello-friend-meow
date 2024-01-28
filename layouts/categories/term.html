@@ -22,26 +22,20 @@
 
                 <ul class="posts-list">
                     {{ range .Pages }}
-
-                        {{ if isset .Params "rssclub" }}
-                        <!-- do nothing -->
-                        {{ else }}
-                            <li class="post-item">
-                                <div>
-                                    <a href="{{.Permalink}}">
-                                        <span class="post-title">{{.Title}}</span>
-                                    </a>
-                                </div>
-                                <div class="post-day">
-                                    {{ if .Site.Params.dateformShort }}
-                                        {{ .Date.Format .Site.Params.dateformShort }}
-                                    {{ else }}
-                                        {{ .Date.Format "Jan 2"}}
-                                    {{ end }}
-                                </div>
-                            </li>
-                        {{ end }}
-                        
+                        <li class="post-item">
+                            <div>
+                                <a href="{{.Permalink}}">
+                                    <span class="post-title">{{.Title}}</span>
+                                </a>
+                            </div>
+                            <div class="post-day">
+                                {{ if .Site.Params.dateformShort }}
+                                    {{ .Date.Format .Site.Params.dateformShort }}
+                                {{ else }}
+                                    {{ .Date.Format "Jan 2"}}
+                                {{ end }}
+                            </div>
+                        </li>
                     {{ end }}
                 </ul>
             </div>
