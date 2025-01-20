@@ -44,7 +44,6 @@
     &-title {
       font-size: 1.375rem;
       margin: 5px 0 5px 0;
-
     }
 
     &-year {
@@ -52,6 +51,7 @@
       margin-right: 1.8em;
       font-size: 1.6em;
       @include dimmed;
+      transform: rotate(3deg);
     }
 
     &-item {
@@ -61,6 +61,22 @@
       align-items: center;
       flex-direction: row;
       padding: 1.063rem 0;
+      
+      div {
+        transition: transform .15s ease-in-out;
+      }
+
+      &:hover {
+        .post-link {
+          transform: scale(1.05);
+        }
+
+
+        .post-day {
+          transform: rotate(-5deg);
+        }
+      }
+    
 
       [data-theme=dark] & {
         border-bottom: 1px var(--post-item-border-color) solid;
@@ -75,7 +91,7 @@
         font-weight: 900;
         color: var(--href-color);
         text-decoration-color: var(--accent);
-      
+        
         &:hover {
           color: var(--href-color-hover);
         }
@@ -96,6 +112,7 @@
       [data-theme=light] & {
         color: var(--post-item-day-color);
       }
+
     }
   }
 
@@ -108,12 +125,17 @@
       grid-template-columns: repeat(2,1fr);
     }
 
+    &-title {
+      display: inline-block;
+    }
+
     a {
       padding: 5px 10px;
       text-decoration: none;
       font-size: .8em;
       font-weight: 900;
       text-align: center;
+      transition: transform .15s ease-in-out;
 
       background-color: var(--new-button-bg);
       color: var(--new-button-text);
@@ -122,6 +144,11 @@
       &:hover {
         color: var(--new-button-text-hover);
         background-color: var(--new-button-bg-hover);
+        transform: scale(1.10);
+
+        .tags-title {
+          transform: rotate(-1deg) scale(1.10);
+        }
       }
     }
   }

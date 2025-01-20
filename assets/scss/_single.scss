@@ -369,6 +369,7 @@
   appearance: none;
   // Default
   background: var(--page-background);
+  transition: transform .15s ease-in-out;
 
   [data-theme=dark] & {
     background: var(--page-background);
@@ -404,4 +405,27 @@
   &.previous .button__icon {
     margin-right: 8px;
   }
+
+    &.previous {
+      &:hover{
+        transform: scale(1.05) rotate(-1deg);
+        border: #d20f39 1px solid;
+    
+        .button__icon {
+          transform: translateX(-3px);
+        }
+      }
+    }
+
+    &.next {
+      &:hover{
+        transform: scale(1.05) rotate(1deg);
+        border: #40a02b 1px solid;
+    
+        .button__icon {
+          transform: translateX(3px);
+        }
+      }
+    }
+
 }

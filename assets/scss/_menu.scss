@@ -4,6 +4,7 @@
   grid-gap: 8px;
   grid-template-columns: repeat(4,1fr);
   display: grid;
+  transition: transform .15s ease-in-out;
 
   @media #{$media-size-phone} {
     grid-template-columns: repeat(2,1fr);
@@ -16,6 +17,7 @@
     font-weight: 900;
     text-align: center;
     text-transform: lowercase;
+    transition: transform .15s ease-in-out;
 
     background-color: var(--new-button-bg);
     color: var(--new-button-text);
@@ -24,6 +26,7 @@
     &:hover {
       color: var(--new-button-text-hover);
       background-color: var(--new-button-bg-hover);
+      transform: rotate(-1deg);
     }
   }
 }
