@@ -441,6 +441,18 @@ hr {
   margin: 30px 0;
   width: 100%;
   max-width: var(--content-width);
+  transition: transform .15s ease-in-out;
+  
+
+  img {
+    transition: transform .15s ease-in-out;
+    border: var(--content-background) 1px solid;
+
+    &:hover {
+      border-color: #fe640b;
+      transform: scale(0.98) rotate(-5deg);
+    }
+  }
 
   &-title {
     display: flex;
